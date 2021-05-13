@@ -1,0 +1,1827 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2021-05-13T00:51:55.235059+00:00",
+  "repo": "intarchboard/draft-use-it-or-lose-it",
+  "labels": [
+    {
+      "name": "bug",
+      "description": null,
+      "color": "ee0701"
+    },
+    {
+      "name": "duplicate",
+      "description": null,
+      "color": "cccccc"
+    },
+    {
+      "name": "enhancement",
+      "description": null,
+      "color": "84b6eb"
+    },
+    {
+      "name": "help wanted",
+      "description": null,
+      "color": "128A0C"
+    },
+    {
+      "name": "invalid",
+      "description": null,
+      "color": "e6e6e6"
+    },
+    {
+      "name": "question",
+      "description": null,
+      "color": "cc317c"
+    },
+    {
+      "name": "wontfix",
+      "description": null,
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 2,
+      "id": "MDU6SXNzdWUyMTQ5MTk2Mzk=",
+      "title": "mnot is right",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/2",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This needs some careful editing to tighten it up.",
+      "createdAt": "2017-03-17T06:35:59Z",
+      "updatedAt": "2018-04-30T08:13:55Z",
+      "closedAt": "2018-04-30T08:13:55Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Not sure that I managed with the last pass, so I'll iterate again later.",
+          "createdAt": "2017-09-12T04:14:23Z",
+          "updatedAt": "2017-09-12T04:14:23Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Much better now.",
+          "createdAt": "2018-04-30T08:13:55Z",
+          "updatedAt": "2018-04-30T08:13:55Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "MDU6SXNzdWUyMTgzNTQ0MTc=",
+      "title": "attribute 99 example",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/3",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From Stephane Bortzmeyer:\r\n> May be adding a mention of the \"attribute 99\" debacle? That was a good\r\ncase of a legal value breaking implementations that were not expecting\r\nit.\r\n\r\nhttps://labs.ripe.net/Members/erik/ripe-ncc-and-duke-university-bgp-experiment/\r\nhttp://ccie-in-3-months.blogspot.kr/2010/08/decoding-ripe-experiment.html",
+      "createdAt": "2017-03-30T23:13:09Z",
+      "updatedAt": "2021-03-05T22:52:06Z",
+      "closedAt": "2021-03-05T22:52:06Z",
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "MDU6SXNzdWUzMTg4MTQyMzg=",
+      "title": "Need some examples from lower layers",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/4",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [
+        "britram"
+      ],
+      "labels": [],
+      "body": "#3 might work, though Brian has volunteered to provide text, which is even better.",
+      "createdAt": "2018-04-30T08:14:41Z",
+      "updatedAt": "2018-06-27T20:44:46Z",
+      "closedAt": "2018-06-27T20:44:46Z",
+      "comments": [
+        {
+          "author": "britram",
+          "authorAssociation": "COLLABORATOR",
+          "body": "please assign this to me so I won't forget it :)",
+          "createdAt": "2018-04-30T08:16:13Z",
+          "updatedAt": "2018-04-30T08:16:13Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "You'll have to accept the invite I just sent you first.",
+          "createdAt": "2018-04-30T10:16:12Z",
+          "updatedAt": "2018-04-30T10:16:12Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "MDU6SXNzdWU0MjU5NjI0ODY=",
+      "title": "Mention invariants",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/6",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "...and their interaction with greasing. Invariants are the properties of the protocol that you don't want to protect.",
+      "createdAt": "2019-03-27T13:33:11Z",
+      "updatedAt": "2019-07-04T04:33:30Z",
+      "closedAt": "2019-07-04T04:33:30Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The interaction with greasing is a complementary one.  And both assume a very particular threat model.  The goal is not to defend against a motivated adversary, but to help those that aim to implement the protocol faithfully.  For greasing, there is an active mechanism that provides gentle encouragement to do the right thing; for invariants, the goal is more modest.  Invariants aim to clearly document those pieces of the protocol that are *intentionally ossified into the design*, as opposed to those things are are merely exposed to ossification. ",
+          "createdAt": "2019-03-28T06:38:35Z",
+          "updatedAt": "2019-03-28T06:38:35Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@britram, @mirjak, do you have anything to add here?",
+          "createdAt": "2019-03-28T06:39:41Z",
+          "updatedAt": "2019-03-28T06:39:41Z"
+        },
+        {
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "body": "One question that I had was if we maybe should use the term greasing a bit more generic than \"just\" a specific technique as used by TLS. For me defining invariants, by saying these bits are fixed, also means that you need to make sure that all other bits vary (randomly) and could not be ossified accidentally. That's a bit stronger than just complementing each other, as you say above. I would even say that you need one for the other: if you define invariants, you must think about greasing/flexibility of everything else. Does that make sense?",
+          "createdAt": "2019-03-28T08:50:07Z",
+          "updatedAt": "2019-03-28T08:50:07Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "MDU6SXNzdWU0NTUyMjU3MDA=",
+      "title": "Look for older examples of greasing",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/8",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Ted suggests that while the name is new, the practice probably isn't.  Send an email to architecture-discuss asking for examples of this sort of thing in the past.",
+      "createdAt": "2019-06-12T13:49:23Z",
+      "updatedAt": "2019-07-30T01:39:27Z",
+      "closedAt": "2019-07-30T01:39:27Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This discussion didn't turn up much.  It seems like there is a case to be made here that greasing is a new technique.",
+          "createdAt": "2019-07-30T01:39:27Z",
+          "updatedAt": "2019-07-30T01:39:27Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "MDU6SXNzdWU0NTUyNDExNTE=",
+      "title": "Back claims more",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/9",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From Stephen Farrell:\r\n\r\n> There are a bunch of assertions in the draft that\r\nmay or may not be true but that are asserted as if\r\nthey are true. I would bet that a bunch of 'em are\r\ntrue but don't see sufficient evidence given or cited.\r\nTo take the earliest example: \"Protocols can react\r\nto these shifts in one of three ways: adjust usage\r\npatterns within the constraints of the protocol,\r\nextend the protocol, and replace the protocol.\" Well,\r\nfirst off, protocols don't react, chemicals and\r\nliving things do:-) But assuming you mean some class\r\nof person, I at least can ignore the hell out of\r\nmany many things as another option. So this doesn't\r\nseem to be a correct analysis of the options. I\r\nthink there are a good few examples like this and\r\nthat those add up to too many to be sure how they\r\nmay affect the overall argument.\r\n\r\nFirst step: collect the instances where this class of error might appear.  Then perform some analysis.",
+      "createdAt": "2019-06-12T14:17:32Z",
+      "updatedAt": "2019-06-12T14:17:32Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "MDU6SXNzdWU0NTUyNDE5NTc=",
+      "title": "BGP example",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/10",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Jeff seemed to suggest that experience with BGP might provide some useful insights.",
+      "createdAt": "2019-06-12T14:19:02Z",
+      "updatedAt": "2021-03-05T22:52:06Z",
+      "closedAt": "2021-03-05T22:52:06Z",
+      "comments": []
+    },
+    {
+      "number": 11,
+      "id": "MDU6SXNzdWU0NTUyNDU4NzY=",
+      "title": "Consider describing RTP/RTCP muxing thing",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/11",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Reclamation of code points here was eventually successful.  Might talk to some mmusic folks about the history there.",
+      "createdAt": "2019-06-12T14:26:07Z",
+      "updatedAt": "2019-06-12T14:28:58Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "SDP also provides great examples of ossified fields.  Consider the RTP/AVP RTP/SAVP RTP/AVPF RTP/SAVPF mess.",
+          "createdAt": "2019-06-12T14:28:58Z",
+          "updatedAt": "2019-06-12T14:28:58Z"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "MDU6SXNzdWU0NjA5MjU2NzI=",
+      "title": "Grease suggestions and motivations",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/15",
+      "state": "CLOSED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The way the grease section ends leaves it unclear in my mind whether it's being a recommended solution or not.  It feels concluded (and maybe it's just informational, but then stating explicitly that there are pros/cons with this mechanism may help state explicitly that there isn't a conclusion being offered).\r\n\r\nIt's also unclear why someone would be motivated to actually implement grease at all; what is the gain by doing so unless you're a security scanner?  Why would the average implementation do something like this?  What's their motivation that justifies an increase in complexity (which you specifically point out doesn't happen in typical engineering in \"Good Protocol Design is Not Sufficient\")?",
+      "createdAt": "2019-06-26T11:52:53Z",
+      "updatedAt": "2019-07-05T01:02:04Z",
+      "closedAt": "2019-07-04T04:35:44Z",
+      "comments": [
+        {
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I like the new text.  But it still doesn't explain what would motivate the average implementation for actually putting the work in (only to actually decrease interoperability temporarily).  In other portions of the document we already state implementors are lazy or trying to push new code quickly, and this is a cost in both $$s, speed and interoperability.  I'm glad it worked for TLS, but what motivated people to do it?  Or was that \"things had gotten so bad we have to do something\"; it certainly wasn't at the start of the protocol, ie.",
+          "createdAt": "2019-07-03T23:59:12Z",
+          "updatedAt": "2019-07-03T23:59:12Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Doesn't it say that it is done to protect the ability to deploy new extensions in future?  Sure, that's not always a pressing concern, but that depends on how acutely you have felt the pain of not being able to ship an extension.",
+          "createdAt": "2019-07-04T04:25:56Z",
+          "updatedAt": "2019-07-04T04:25:56Z"
+        },
+        {
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "What market forces are motivated to implement and deploy it?  Logically, I understand why it's useful.  I understand less why real-world folks would be willing to take the time and energy to do implement it.  IE, theory: understood.  Practical: I don't see motivation for software writers that could be justified to management easily.",
+          "createdAt": "2019-07-04T20:58:49Z",
+          "updatedAt": "2019-07-04T20:58:49Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I don't think that this is justified on such simple or direct terms.  You probably have to look to the concept of merit goods if you want to get into economics here.  After all, the benefit is not necessarily something that the implementer sees, it's one that the community as a whole sees (or might see) in the fullness of time.\r\n\r\nAfter all, if you couch a question about deploying encryption in the same way, you might have similar trouble in justification.  The answer is usually tied into hedging strategies against the risk of future problems.  \r\n\r\nFor example, you might reasonably say that making cleartext DNS queries in most networks is benign.  And the cost of deploying encryption is considerable. More so if you start with the understanding that most network operators accord those requests with due respect, including taking every effort to ensure that they are the only ones that see those packets.  If you consider the breadth of possible networks and the span of time, the occasional instances of failures in that regard might lead to a different risk assessment.\r\n\r\nCollectively, the QUIC working group has expended significant energy on this general question.  This is in part because of a deeper understanding of the risk profile in that environment.  This stuff really does happen.  I don't know if I recounted the story about Google's QUIC breaking a few years ago due to bad assumptions made about the semantics of a key protocol element.  Add the scars from multiple bad experiences with TLS and you might appreciate that there is some desire to address the problem proactively.\r\n\r\nOf course, even with the desire to protect future extensibility, there is some justified skepticism about the efficacy of greasing as a general mechanism.  I hope that this document has captured that.",
+          "createdAt": "2019-07-05T01:02:04Z",
+          "updatedAt": "2019-07-05T01:02:04Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "MDU6SXNzdWU0NjA5Nzg3MDM=",
+      "title": "Jari's comments",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/17",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@jariarkko says\r\n\r\n> The areas of concern I personally have are s3.2 and s4.4 and possibly better discussion of where this advice and experience applies and where it does not. Machines vs. Humans, applications vs. network gear, etc.\r\n\r\nRight now, I don't know how to act based on this.  This will need more discussion.",
+      "createdAt": "2019-06-26T13:41:48Z",
+      "updatedAt": "2020-12-15T03:16:55Z",
+      "closedAt": "2020-12-15T03:16:55Z",
+      "comments": [
+        {
+          "author": "jariarkko",
+          "authorAssociation": "NONE",
+          "body": "I left a comment in IAB-email about some suggestions on what to do.",
+          "createdAt": "2019-06-26T16:49:36Z",
+          "updatedAt": "2019-06-26T16:49:36Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "A reponse was given there, including several changes.  Closing in favour of more specific issues.",
+          "createdAt": "2020-12-15T03:16:55Z",
+          "updatedAt": "2020-12-15T03:16:55Z"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "id": "MDU6SXNzdWU0NjUwMTM0MDk=",
+      "title": "Cite upcoming IAB output",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/21",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "There was discussion of a statement or RFC that says \"if you network it, it will be networked\" or \"any networked device should assume the internet threat model\" or something along those lines.  That would be a valuable citation in the context of the applicability statement.\r\n\r\nThere are many cases where people believe that their network won't end up connected to the Internet.  They make assumptions on that basis and are eventually disappointed to find that there are pressures to become networked (or someone does it for them, see also \"SSL added and removed here\").  At that point, assumptions about security become invalid and bad things happen.\r\n\r\nHere, the point is that the scope of potential use might not be as constrained as imagined.  So if someone thought that these considerations don't apply because of a narrow deployment context, that might not hold true forever.  This is less serious than the security thing, but certainly worth a caution.",
+      "createdAt": "2019-07-08T00:57:35Z",
+      "updatedAt": "2019-07-08T00:57:35Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 24,
+      "id": "MDU6SXNzdWU0NzQzMjg1Mjg=",
+      "title": "Mix of core and extensions",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/24",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From Wes:\r\n\r\n> do we want to mention that the success of headers functionally is because there is a mix of both protocol specific fields and extra meta data; IE, allowing users and developers to specify new fields that will never be part of the protocol makes the fields be understood",
+      "createdAt": "2019-07-30T01:38:40Z",
+      "updatedAt": "2020-12-15T00:13:31Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "In reviewing this, the HTTP community are not in agreement on the relative value gained by intermixing protocol extensions and content metadata.  Several proposals have been made to remove this entanglement.\r\n\r\nIt is possible that the shared pool has allowed each to benefit from active use from the other, but as both aspects of the protocol are routinely extended my sense is that this is not a major contributing factor.",
+          "createdAt": "2020-12-15T00:13:31Z",
+          "updatedAt": "2020-12-15T00:13:31Z"
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "id": "MDU6SXNzdWU3NjE2MzcwOTE=",
+      "title": "link to ourself",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/25",
+      "state": "CLOSED",
+      "author": "kaduk",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The published Internet-Draft should have a link to the github repo where the document is being maintained.",
+      "createdAt": "2020-12-10T21:37:48Z",
+      "updatedAt": "2020-12-10T23:25:35Z",
+      "closedAt": "2020-12-10T23:25:35Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Fixed in ae5661e",
+          "createdAt": "2020-12-10T23:25:35Z",
+          "updatedAt": "2020-12-10T23:25:35Z"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "id": "MDU6SXNzdWU3NjE2NDExMjQ=",
+      "title": "examples of invariants helping?",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/26",
+      "state": "OPEN",
+      "author": "kaduk",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "On the face of it, explicitly saying \"these are the invariants\" ought to imply that everything not listed is subject to change.  Have we been specifying invariants anywhere for long enough to know whether this naive expectation actually holds?",
+      "createdAt": "2020-12-10T21:43:57Z",
+      "updatedAt": "2020-12-11T01:07:07Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Welcome to the experiment.  I'm not aware of any attempts at the level we're attempting in QUIC (and I guess TLS to a lesser degree).  I've seen other protocols with less distinct versions of this text, but it's hard to know to what extent that has been successful as it is less obvious.",
+          "createdAt": "2020-12-11T01:07:07Z",
+          "updatedAt": "2020-12-11T01:07:07Z"
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "id": "MDU6SXNzdWU3NjE2NTg5ODI=",
+      "title": "Version negotiation",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/27",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@tfpauly identified a pattern that is useful for version negotiation: rather than build a mechanism that won't be used until v2, hoist the negotiation out of the protocol to the next layer down.  That way you can take advantage of the extension mechanisms at that layer seeing more use (and therefore gaining use-it-or-lose it advantages).\r\n\r\nAdd a new section specifically about version negotiation in the design principles section.\r\n\r\nSee also IPv6 Ethertype, ALPN, https://github.com/intarchboard/edm/issues/8\r\n\r\nIt might also be worth pointing to https://eprint.iacr.org/2016/072",
+      "createdAt": "2020-12-10T22:11:45Z",
+      "updatedAt": "2021-03-05T22:49:15Z",
+      "closedAt": "2021-03-05T22:49:15Z",
+      "comments": []
+    },
+    {
+      "number": 28,
+      "id": "MDU6SXNzdWU3NjE2NzEzMDY=",
+      "title": "Correct or fail",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/28",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "One of the nice innovations in the design of TLS 1.3 was the inclusion of mechanisms that ensured that correct implementation of a feature was necessary for interoperation.  Including mention of this in the \"dependency\" chapter would be great.  The key element here is creating a mechanism where defection by one entity results in changes to keys, and so a mistake in implementation would result in an inability to communicate.\r\n\r\nI can't recall the specific mechanism, but the QUIC Initial encryption is an example of this.",
+      "createdAt": "2020-12-10T22:31:04Z",
+      "updatedAt": "2021-01-11T01:16:44Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "The more I think about this, the less enthusiastic I am about including it.  It feels like a digression into other areas of protocol design.  These tricks are intended to ensure that both peers agree by encoding that agreement into functions that are critical to protocol operation, like the derivation of encryption keys or the TLS finished.  We've learned that these tricks can be useful and can even improve protocol efficiency by allowing validation of agreement without exchanging data (see the QUIC Retry authentication), but they don't necessarily apply to the central theme of this draft.",
+          "createdAt": "2020-12-15T03:21:09Z",
+          "updatedAt": "2020-12-15T03:21:09Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "I think this may still be relevant to include this point in some form, although I agree with your assessment that it may not be appropriate as a top-level argument.\n\nIf we're discussing how version negotiation is particularly prone to ossification, a recommendation that comes out of that is that it can be done in some other protocol's extension layer (ALPN, as the primary example). It would be good to point out at this moment that the mechanism selected for doing version negotiation really ought to be one that has integrity checks and authentication (like how TLS folds in the transcript hash) rather than a useful extension mechanism that could lead to downgrade attacks. ",
+          "createdAt": "2021-01-10T22:52:46Z",
+          "updatedAt": "2021-01-10T22:52:46Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'd be interested to see how you might fit something like that in.  I appreciate that the interaction of downgrade protection with version negotiation makes it more challenging than otherwise (see QUIC discussions), but I'm still concerned that it would end up being a digression rather than contributing to the central theme.",
+          "createdAt": "2021-01-11T01:16:44Z",
+          "updatedAt": "2021-01-11T01:16:44Z"
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "id": "MDU6SXNzdWU3ODI5MjcxNTg=",
+      "title": "Discuss coordination as a strategy for active use and greasing",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/31",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "In our December EDM call, we discussed how coordination is actually more important than greasing overall as a strategy for active use. This topic should be brought up and discussed in the document.",
+      "createdAt": "2021-01-10T22:53:48Z",
+      "updatedAt": "2021-01-10T22:53:48Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 32,
+      "id": "MDU6SXNzdWU4MzYzMzQ3MjE=",
+      "title": "Discuss greasing as an addition to an existing protocol, versus being part of it from the start",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/32",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "DavidSchinazi"
+      ],
+      "labels": [],
+      "body": "We may want to consider the distinction between trying to add greasing to an existing protocol (TLS, HTTP) versus adding it from the start (QUIC). ",
+      "createdAt": "2021-03-19T20:25:57Z",
+      "updatedAt": "2021-04-22T21:47:51Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "DavidSchinazi",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The doc doesn't distinguish between adding GREASE at the start (e.g. QUIC) vs retrofitting it (e.g. TLS). Perhaps we should mention that it is useful in both cases. An important property here is that we need the joint to get exercised periodically: adding a new extension every so often works, and GREASE allows us to artificially increasing the cadence in cases where it isn't exercised. It's also possible to force this cadence by coordinating and evolving protocols periodically (e.g. minting a new QUIC version number every 6 months that is the same as QUICv1).",
+          "createdAt": "2021-04-22T21:34:41Z",
+          "updatedAt": "2021-04-22T21:39:18Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See #42.  It doesn't do all of the above, but it might help.",
+          "createdAt": "2021-04-22T21:47:51Z",
+          "updatedAt": "2021-04-22T21:47:51Z"
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "id": "MDU6SXNzdWU4NjQwNTM5MzA=",
+      "title": "Provide an example for cases where an extension mechanism is mandatory but not used",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/34",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Can we provide an example for this text?\r\n\r\nCaution is advised to avoid assuming that building a dependency on an extension\r\nmechanism is sufficient to ensure availability of that mechanism in the long\r\nterm.  If the set of possible uses is narrowly constrained and deployments do\r\nnot change over time, implementations might not see new variations or assume a\r\nnarrower interpretation of what is possible.  Those implementations might still\r\nexhibit errors when presented with new variations.",
+      "createdAt": "2021-04-21T16:13:35Z",
+      "updatedAt": "2021-05-05T14:58:20Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Stephen had a good example of the must-understand extensions in X.509 that might work.",
+          "createdAt": "2021-04-21T23:52:01Z",
+          "updatedAt": "2021-04-21T23:52:01Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "TLS signature algorithms were a finite enough set that didn't have changes that made extending it very difficult, as one example.\r\n\r\nWe can also back-reference to the \"examples of disuse\" section here.",
+          "createdAt": "2021-04-22T21:13:31Z",
+          "updatedAt": "2021-04-22T21:13:31Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "Pointing to the TLS version problem as an example of where implementations required a narrow set would be good.",
+          "createdAt": "2021-04-22T21:14:49Z",
+          "updatedAt": "2021-04-22T21:14:49Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We have the IP version stuff already.  Would that be a better example?",
+          "createdAt": "2021-04-23T01:46:56Z",
+          "updatedAt": "2021-04-23T01:46:56Z"
+        },
+        {
+          "author": "fluffy",
+          "authorAssociation": "MEMBER",
+          "body": "SIP messages start with \"SIP/2.0\" - Good Luck with changing that 2.0 to anything else and having anything useful happen\r\n\r\n",
+          "createdAt": "2021-05-05T14:58:20Z",
+          "updatedAt": "2021-05-05T14:58:20Z"
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "id": "MDU6SXNzdWU4NjQwNTY2NDI=",
+      "title": "Unify sections on disuse?",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/35",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "There are currently two sections that cover roughly the same point, with separate examples. It seems odd to have one in section 2, and one in section 3. Can 3.3 be merged into 2.2?\r\n\r\n2.2. Examples of Disuse\r\n\r\n3.3. Unused Extension Points Become Unusable",
+      "createdAt": "2021-04-21T16:16:59Z",
+      "updatedAt": "2021-04-22T21:25:04Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "We can fold the \"positive\" bits of 3.3 back into 3.2, and move the \"negative\" examples from 3.3. into 2.2.",
+          "createdAt": "2021-04-22T21:25:04Z",
+          "updatedAt": "2021-04-22T21:25:04Z"
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "id": "MDU6SXNzdWU4NjQwNTkxOTU=",
+      "title": "Can we provide guidelines for frequency of active use?",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/36",
+      "state": "CLOSED",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "tfpauly"
+      ],
+      "labels": [],
+      "body": "The section on Active Use currently says:\r\n\r\nThere are currently no firm\r\nguidelines for new protocol development.\r\n\r\nCan we do a bit better here to define some principles about how deployment timings and evolution should relate to the use of extension points? Or does that become a separate document?",
+      "createdAt": "2021-04-21T16:20:12Z",
+      "updatedAt": "2021-05-12T02:42:06Z",
+      "closedAt": "2021-05-12T02:42:06Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Might be worth leaving out of scope.",
+          "createdAt": "2021-04-21T23:52:23Z",
+          "updatedAt": "2021-04-21T23:52:23Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "The solution is out of scope, but we can look at rewording to say \"more experimentation needs to be done\", or that it would be useful to figure out the cadence that is required for active use of a given protocol to help it not ossify.",
+          "createdAt": "2021-04-22T21:21:05Z",
+          "updatedAt": "2021-04-22T21:21:05Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Tommy, if you can suggest a different sentence, that would be good.",
+          "createdAt": "2021-04-23T01:45:41Z",
+          "updatedAt": "2021-04-23T01:45:41Z"
+        },
+        {
+          "author": "fluffy",
+          "authorAssociation": "MEMBER",
+          "body": "I think we should remove  \"There are currently no firm guidelines for new protocol\r\n   development.\"  A document like this is never going to be able to give hard guidelines on this or any of the other section which are equally vague on how to achieve the goals. The goals are clearly stated here - no need to do more. ",
+          "createdAt": "2021-05-05T14:54:58Z",
+          "updatedAt": "2021-05-05T14:54:58Z"
+        },
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "Yeah, I'll just remove the sentence.",
+          "createdAt": "2021-05-11T19:28:14Z",
+          "updatedAt": "2021-05-11T19:28:14Z"
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "id": "MDU6SXNzdWU4NjQxODQyNzQ=",
+      "title": "Describe greasing in QUIC",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/38",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "DavidSchinazi"
+      ],
+      "labels": [],
+      "body": "Current text is only TLS, we should add QUIC",
+      "createdAt": "2021-04-21T19:11:07Z",
+      "updatedAt": "2021-04-21T19:11:07Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 39,
+      "id": "MDU6SXNzdWU4NjUyNTUzMjE=",
+      "title": "Threat model",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/39",
+      "state": "OPEN",
+      "author": "chris-wood",
+      "authorAssociation": "NONE",
+      "assignees": [
+        "chris-wood"
+      ],
+      "labels": [],
+      "body": "There's a lot of great material in this document, but I think one thing that's missing is the threat model. I think this was discussed on a prior call, but consider the following two types of TLS examples:\r\n\r\n1. PQ key shares in an extension: in practice, we're primarily concerned with whether or not larger flights will make it through the network. The adversary is not an active attacker, but a benign, possibly buggy middlebox. Greasing to exercise size limits on TLS flights seems like a way to test this in practice.\r\n2. ECH: in practice, we're primarily concerned with whether passive or active middleboxes will tamper with or otherwise block connections using this extension. Greasing _might_ also apply here, but it's less clear than the above example.\r\n\r\nIn general, the threat model here seems to be more in line with (1). The syntax (wire image) of a protocol might trigger certain middlebox or endpoint behavior that is undesired, and so greasing to avoid these seems generally good. In contrast, (2) modifies both the syntax _and_, in way, the semantics of the protocol. Greasing in the spirit of this draft doesn't seem immediately applicable. \r\n\r\nIf it would be useful, I can try and contribute some text to clarify the desired threat model. ",
+      "createdAt": "2021-04-22T17:48:46Z",
+      "updatedAt": "2021-05-05T14:51:56Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Useful: yes; easy: no.\r\n\r\nTo start with, I think that the ECH greasing is not entirely in scope here.  Part of that is related to the threat model, where we are considering adversaries of varying levels of sophistication and motivation who might want to block, disrupt, or undermine ECH deployment.  That's a little beyond the scope of this document I think.\r\n\r\nThe PQ thing is twofold: it's a performance optimization problem (handshakes that span multiple packets, exceeding congestion windows or anti-amplification limits), and a problem where implementations choke on big messages.  I suspect that the former is worse than the latter, but I have no direct information.\r\n\r\nThe main thing this draft attempts to address is the potential for neglect or laziness to stymie attempts to evolve protocols.  The goal is to capture all the natural pressures on implementations that might lead to ossifying choices.  This includes economy of implementation and various security-based things.  Aside from outright bugs, we are talking about implementations deliberately building features that constrain or prevent protocol evolution.  \r\n\r\nSo the threat model here is an actor that is either ignorant of or sufficiently insulated from the effects of ossification.  Nothing in the document - except perhaps from the encryption bit - is effective against a deliberate attempt to prevent protocol evolution.\r\n\r\nECH definitely has a threat model that is a superset of this on that basis.\r\n\r\nPQ might fit if we're just talking about bugs, but it might just be running into limits of what is fair game for standardization if we are talking about the performance aspects.  If you look at QUIC, the limits of standardization are clear: we could say \"all networks MUST support UDP\", but that won't stop networks from choosing to block UDP.  We can change the cost-benefit analysis by making QUIC support more or less attractive, but we can't take that choice away altogether.",
+          "createdAt": "2021-04-22T23:13:02Z",
+          "updatedAt": "2021-04-22T23:13:02Z"
+        },
+        {
+          "author": "fluffy",
+          "authorAssociation": "MEMBER",
+          "body": "If protocols had clear Invariants, firewalls would be more likely to enforce theses that make up their own view of things they think are invariants that are not. For example, SIP does not specify a max length for a a header field value so many firewalls make up their own limits and that impacts future use of new larger values. ",
+          "createdAt": "2021-05-05T14:51:56Z",
+          "updatedAt": "2021-05-05T14:51:56Z"
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "id": "MDU6SXNzdWU4NjU0ODQyODI=",
+      "title": "Codepoint reclaim is difficult if negotiation with every node is needed",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/41",
+      "state": "CLOSED",
+      "author": "jariarkko",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The current draft says:\r\n\r\n\"Codepoints that are reserved for future use can be especially problematic. Reserving codepoints without attributing semantics to their use can result in diverse or conflicting semantics being attributed without any hope of interoperability. An example of this is the \"class E\" address space in IPv4 {{?RFC0988}}, which was reserved without assigning any semantics. For protocols that can use negotiation to attribute semantics to codepoints, it is possible that unused codepoints can be reclaimed for active use, though this requires that the negotiation include all protocol participants.\"\r\n\r\nThis is valid of course. The text is good as is. However, it might be useful to point out that reclaiming in class E type cases is difficult, because you'd have to negotiate with everyone on the path, as otherwise the intervening routers may discard packets that seemingly use wrong kind of addresses. Or clarify that the latter part of the paragraph applies only to actually *unused* codepoints, whereas *reserved-but-unused* has likely lead to code that prohibits the use.\r\n\r\nE.g., one could add this text to the end of the paragraph: \"This is in practice impossible in situations such as those involving class E addresses, as all protocol participants would have to include every node along the path.\"\r\n",
+      "createdAt": "2021-04-22T21:21:51Z",
+      "updatedAt": "2021-05-03T15:56:42Z",
+      "closedAt": "2021-05-03T15:56:42Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Or maybe just \"...which includes every node on the path\"",
+          "createdAt": "2021-04-22T22:00:25Z",
+          "updatedAt": "2021-04-22T22:00:25Z"
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "id": "MDU6SXNzdWU4NjU1MjI5NDQ=",
+      "title": "Consider restructuring section 4",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/43",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "tfpauly"
+      ],
+      "labels": [],
+      "body": "Consider grouping as:\r\n\r\nActive Use\r\n- Extensions\r\n- Version Negotiation (active use of the layer that contains you)\r\n- Filler/grease\r\n\r\nOther\r\n- Crypto\r\n- Invariants\r\n- Feedback",
+      "createdAt": "2021-04-22T21:57:21Z",
+      "updatedAt": "2021-04-23T01:51:39Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "Or break out feedback into it's own.. don't call this \"other\".",
+          "createdAt": "2021-04-22T21:58:09Z",
+          "updatedAt": "2021-04-22T21:58:09Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I would say instead:\r\n\r\n* Active Use (with the content from the section lifted up into the top of the section)\r\n  * Version Negotiation (as active use)\r\n  * Faking Active Use\r\n* Supplementary Defensive Techniques (it's not *literally* \"Other\"; but I would be happy to get better suggestions; framing would be that these - in addition to active use - might help)\r\n  * Crypto\r\n  * Invariants\r\n  * Feedback\r\n\r\nI realize that this structure has its own shortcomings, but one thing that is nice is that it doesn't require a whole lot of rewriting to get to this point.",
+          "createdAt": "2021-04-23T01:51:39Z",
+          "updatedAt": "2021-04-23T01:51:39Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "MDExOlB1bGxSZXF1ZXN0MTA5OTc1NTQ1",
+      "title": "Minor nitpicks and spelling",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/1",
+      "state": "MERGED",
+      "author": "MikeBishop",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Nothing major here.",
+      "createdAt": "2017-03-09T18:23:37Z",
+      "updatedAt": "2017-03-09T22:15:09Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "078c3650de5607e5d30102d21afe06d01574ec00",
+      "headRepository": null,
+      "headRefName": "nits",
+      "headRefOid": "2cc483f35dc8a1dd0f83be5e060cca1fa14ddfee",
+      "closedAt": "2017-03-09T22:15:05Z",
+      "mergedAt": "2017-03-09T22:15:05Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "dcc43bfa694950ae4e1a03ba9b3adab023653100"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks Mike!",
+          "createdAt": "2017-03-09T22:15:09Z",
+          "updatedAt": "2017-03-09T22:15:09Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "MDExOlB1bGxSZXF1ZXN0MTk3ODMwMTQ1",
+      "title": "add middlebox examples and restate the problem with extensions (closes #4)",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/5",
+      "state": "MERGED",
+      "author": "britram",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As promised back in April (iirc). I couldn't think of any examples of where extensibility has worked well at lower layers, so I left that out.",
+      "createdAt": "2018-06-27T19:28:45Z",
+      "updatedAt": "2018-06-27T20:44:54Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "8359b583ed923b895540863201def21f74b40c4f",
+      "headRepository": "britram/use-it-or-lose-it",
+      "headRefName": "brian-edits",
+      "headRefOid": "8bf298ebf087cf77e796e995df10cd1f642a12dc",
+      "closedAt": "2018-06-27T20:44:45Z",
+      "mergedAt": "2018-06-27T20:44:45Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "9d614695ba77e2bb5b3f1ef63ec64d41193bab46"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks Brian!",
+          "createdAt": "2018-06-27T20:44:54Z",
+          "updatedAt": "2018-06-27T20:44:54Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjY1OTI5MjEx",
+      "title": "Document invariants",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/7",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I also adjusted some of the language around greasing based on Mirja's\r\nfeedback.\r\n\r\nCloses #6.\r\n\r\n/cc @britram, @mirjak",
+      "createdAt": "2019-03-30T10:08:48Z",
+      "updatedAt": "2019-07-04T04:33:34Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "6f0f58e9094fa53b1b495816c1f04a5b26166457",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "invariants",
+      "headRefOid": "d4f5ba2387262b0c313135616661ab20a87a1780",
+      "closedAt": "2019-07-04T04:33:30Z",
+      "mergedAt": "2019-07-04T04:33:30Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "9635f179adfa92f396fb655921a72e8607d12d06"
+      },
+      "comments": [
+        {
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "body": "Also not sure if putting this as a subsection in 4 is the best place to put it. However, as I indicated in the discussion in the StackEvo meeting, putting it somewhere else would probably need a bit of restructuring of the whole document... ",
+          "createdAt": "2019-04-01T11:21:26Z",
+          "updatedAt": "2019-04-01T11:21:26Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I appreciate the point about structure here, but it's not particularly easy to throw everything up in the air and start over.  If you have some ideas about how to move toward a better structure, I can try to shuffle things around a little.",
+          "createdAt": "2019-04-03T11:39:17Z",
+          "updatedAt": "2019-04-03T11:39:17Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjIxMDUxMjM0",
+          "commit": {
+            "abbreviatedOid": "844cae5"
+          },
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-04-01T11:15:44Z",
+          "updatedAt": "2019-04-01T11:15:44Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "Not sure I really understand what you want to say here. When you talk about implementations, is that endpoint implementations or any implementation that may interact with the protocol? Also how could an implementation not admit an invariant? For me documenting invariants was not really intended to guide implementation (so far) but rather have an explicit step in the design of a protocol.",
+              "createdAt": "2019-04-01T11:15:44Z",
+              "updatedAt": "2019-07-04T04:32:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjIyMTUyNzE3",
+          "commit": {
+            "abbreviatedOid": "7877eed"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-04-03T11:37:30Z",
+          "updatedAt": "2019-04-03T11:37:30Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "I took another spin at this.  Let me know if this is better.",
+              "createdAt": "2019-04-03T11:37:30Z",
+              "updatedAt": "2019-07-04T04:32:58Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkxOTQ5Nzkz",
+      "title": "Protocol design changes",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/12",
+      "state": "MERGED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Here are some suggested additions and a few edits to the protocol design section.",
+      "createdAt": "2019-06-26T11:45:31Z",
+      "updatedAt": "2019-07-04T04:34:21Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "d9e380641f363d46c3762f998c08674847c0cd2e",
+      "headRepository": "hardaker/use-it-or-lose-it",
+      "headRefName": "protocol-design-changes",
+      "headRefOid": "9a848594e0aecbcc734a398dc7a5a248847e27e1",
+      "closedAt": "2019-07-04T04:34:21Z",
+      "mergedAt": "2019-07-04T04:34:21Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "6c4d945d1a5bbe49ff8d2e5241e20ba4dbf56111"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU0NTg4MDkw",
+          "commit": {
+            "abbreviatedOid": "f7db396"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Nice additions!\r\n\r\nA few typos here and suggestions.",
+          "createdAt": "2019-06-26T12:50:23Z",
+          "updatedAt": "2019-06-26T13:05:00Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "I don't think that this is necessary.\r\n\r\nThough it is perhaps true that a good design can be sufficient, the premise/myth that this addresses is that good design is *always* sufficient.  On that basis, it would be sufficient to provide one counter-example.",
+              "createdAt": "2019-06-26T12:50:24Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            },
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\r\ndeployment of a protocol.  Race-to-market attitudes frequently result in an\r\n```\r\n\r\n... but I think that there is a different way to state this:\r\n\r\n> Market pressures that value timely deployment tend to incentivize development of basic interoperable functions over extension and version negotiation mechanisms.",
+              "createdAt": "2019-06-26T12:57:07Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            },
+            {
+              "originalPosition": 35,
+              "body": "```suggestion\r\nunparseable and an authentication message are treated the same way by\r\n```",
+              "createdAt": "2019-06-26T12:57:41Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            },
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\r\nwhat the protocol specifies should have done: dropped it from being\r\n```",
+              "createdAt": "2019-06-26T13:01:28Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            },
+            {
+              "originalPosition": 60,
+              "body": "This doesn't really cover all the reasons.  Spoofing can be \"helpful\", or it can be used to enforce policy as well.  Maybe the right thing to do here is to stop after \"many middleboxes\".",
+              "createdAt": "2019-06-26T13:03:07Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            },
+            {
+              "originalPosition": 58,
+              "body": "```suggestion\r\nspoofing of DNS records by many middleboxes.\r\n```",
+              "createdAt": "2019-06-26T13:03:17Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU0NzMwODk2",
+          "commit": {
+            "abbreviatedOid": "3486784"
+          },
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-06-26T16:24:28Z",
+          "updatedAt": "2019-06-26T16:24:28Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "Market pressures that value timely and rapid deployment tend to incentivize development of the most needed interoperable functions over less frequently used extensions and error checking, such as in version negotiation mechanisms?",
+              "createdAt": "2019-06-26T16:24:28Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU0NzMyNTUy",
+          "commit": {
+            "abbreviatedOid": "8e4d8d0"
+          },
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-06-26T16:27:25Z",
+          "updatedAt": "2019-06-26T16:27:26Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "I was trying to give an example that the reader would understand and latch on to as an example.  One of the issues I'm trying to address in many of my changes is to introduce specific examples, rather than references to protocols that they may not know the details of.  But your point is valid that it's not the only case.  How about s/to inject/such as those that inject/",
+              "createdAt": "2019-06-26T16:27:26Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU0OTYyMDU2",
+          "commit": {
+            "abbreviatedOid": "8e4d8d0"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-06-27T01:35:32Z",
+          "updatedAt": "2019-06-27T01:35:32Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "SGTM",
+              "createdAt": "2019-06-27T01:35:32Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU3Nzc4ODUw",
+          "commit": {
+            "abbreviatedOid": "5d576e3"
+          },
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-03T23:49:58Z",
+          "updatedAt": "2019-07-03T23:49:59Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "changed",
+              "createdAt": "2019-07-03T23:49:58Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU3Nzc5MDMw",
+          "commit": {
+            "abbreviatedOid": "5d576e3"
+          },
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-03T23:50:56Z",
+          "updatedAt": "2019-07-03T23:50:56Z",
+          "comments": [
+            {
+              "originalPosition": 58,
+              "body": "out of date",
+              "createdAt": "2019-07-03T23:50:56Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU3Nzc5NDE2",
+          "commit": {
+            "abbreviatedOid": "5d576e3"
+          },
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2019-07-03T23:53:12Z",
+          "updatedAt": "2019-07-03T23:53:12Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "How about \"is not itself sufficient\"?",
+              "createdAt": "2019-07-03T23:53:12Z",
+              "updatedAt": "2019-07-04T04:26:58Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkxOTUwMTA3",
+      "title": "some suggestions to the implementation section",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/13",
+      "state": "MERGED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Mostly minor suggestions to the implementation section",
+      "createdAt": "2019-06-26T11:46:27Z",
+      "updatedAt": "2019-07-04T04:27:35Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "d9e380641f363d46c3762f998c08674847c0cd2e",
+      "headRepository": "hardaker/use-it-or-lose-it",
+      "headRefName": "implementation-suggestions",
+      "headRefOid": "76af9424e249ccfd5fefd79db2d4b80ecbc7f382",
+      "closedAt": "2019-07-04T04:27:35Z",
+      "mergedAt": "2019-07-04T04:27:35Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "6f0f58e9094fa53b1b495816c1f04a5b26166457"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MjU0NjA2NTUx",
+          "commit": {
+            "abbreviatedOid": "7fdefd8"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "Some suggestions, but LGTM.",
+          "createdAt": "2019-06-26T13:21:31Z",
+          "updatedAt": "2019-06-26T13:22:37Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\nprotocol changes, especially for protocols involving multiple parties or that are considered\r\n```",
+              "createdAt": "2019-06-26T13:21:31Z",
+              "updatedAt": "2019-07-03T23:47:47Z"
+            },
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\r\ncritical infrastructure (e.g., IP, BGP, DNS, or TLS).  It could even be\r\n```",
+              "createdAt": "2019-06-26T13:21:52Z",
+              "updatedAt": "2019-07-03T23:47:47Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkxOTUwNjM0",
+      "title": "introduction improvements for better overview",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/14",
+      "state": "MERGED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add a few more section references to the introduction.",
+      "createdAt": "2019-06-26T11:48:00Z",
+      "updatedAt": "2019-06-26T13:23:04Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "d9e380641f363d46c3762f998c08674847c0cd2e",
+      "headRepository": "hardaker/use-it-or-lose-it",
+      "headRefName": "intro-update",
+      "headRefOid": "00381153fe8d176eea56c02e1fa661774aa9bd2b",
+      "closedAt": "2019-06-26T13:23:04Z",
+      "mergedAt": "2019-06-26T13:23:03Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "bf0286b69a9904d2ee75e19f293154e4aba2678d"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkxOTYxNzk1",
+      "title": "Restructured active use for flow and other examples",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/16",
+      "state": "MERGED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Some word smithing and examples for active-use",
+      "createdAt": "2019-06-26T12:19:27Z",
+      "updatedAt": "2019-06-26T12:47:10Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "d9e380641f363d46c3762f998c08674847c0cd2e",
+      "headRepository": "hardaker/use-it-or-lose-it",
+      "headRefName": "active-use",
+      "headRefOid": "1dc1a5736319646db466114629f6a89f36aaf5b2",
+      "closedAt": "2019-06-26T12:47:10Z",
+      "mergedAt": "2019-06-26T12:47:10Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "5d44276d607c8a63b55612f28698cf0a996027d9"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks!  I do hear occasionally that this DNS doctrine isn't factual, but I also hear that that is a just a pernicious meme that refuses to die despite the advance of time.",
+          "createdAt": "2019-06-26T12:47:06Z",
+          "updatedAt": "2019-06-26T12:47:06Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 18,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkyMjQxMTM0",
+      "title": "Add a caveat/applicability statement",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/18",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2019-06-27T03:15:21Z",
+      "updatedAt": "2019-07-04T04:34:52Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "7d8a42544f92ed2cc16bba5b000c600a44242fb5",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "framing",
+      "headRefOid": "c494b333ba4c9205d5fa22233b33b09900e4775a",
+      "closedAt": "2019-07-04T04:34:48Z",
+      "mergedAt": "2019-07-04T04:34:48Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "f9cae9da0504079a3f0a85527ea5c936b1c5724e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 19,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkyMjQ4MTMx",
+      "title": "Error reports",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/19",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I'm not sure how much this is just empty platitudes.  It doesn't seem to add much.",
+      "createdAt": "2019-06-27T03:28:45Z",
+      "updatedAt": "2019-07-04T04:35:29Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "7d8a42544f92ed2cc16bba5b000c600a44242fb5",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "error-reports",
+      "headRefOid": "7cf91b04204ae545e167f5780574ca02d695dc66",
+      "closedAt": "2019-07-04T04:35:27Z",
+      "mergedAt": "2019-07-04T04:35:26Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "a954237967cde180542aa2a090c6ee0ac8437252"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 20,
+      "id": "MDExOlB1bGxSZXF1ZXN0MjkyMjU0NTM2",
+      "title": "Expand on greasing a little more",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/20",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Not that this needs more text, but Jari had a neat idea and the section\r\ndid need a stronger conclusion.\r\n\r\nCloses #15.",
+      "createdAt": "2019-06-27T03:40:19Z",
+      "updatedAt": "2019-07-04T04:35:47Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "7d8a42544f92ed2cc16bba5b000c600a44242fb5",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "conclude-grease",
+      "headRefOid": "88628b93897ca60d0ff5b82319846b314662261b",
+      "closedAt": "2019-07-04T04:35:44Z",
+      "mergedAt": "2019-07-04T04:35:44Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "bbbee1824778877fd862c3c650a43e8832bdb292"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 22,
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk2MDEzOTA1",
+      "title": "Wjh review again",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/22",
+      "state": "CLOSED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I reviewed the document from head to tail again, and added/changed a number of things.  It's in much better shape now and I'm looking forward to talking about it this week.",
+      "createdAt": "2019-07-10T05:34:03Z",
+      "updatedAt": "2019-07-10T05:37:00Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "c272ef33b4b0964ce1ba015c6cc742ae8dac8b77",
+      "headRepository": "hardaker/use-it-or-lose-it",
+      "headRefName": "wjh-review-again",
+      "headRefOid": "5f0a996731244788402256d1c57f51f672d77789",
+      "closedAt": "2019-07-10T05:37:00Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "hardaker",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "whoops....  missed merging pulls.",
+          "createdAt": "2019-07-10T05:37:00Z",
+          "updatedAt": "2019-07-10T05:37:00Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 23,
+      "id": "MDExOlB1bGxSZXF1ZXN0Mjk2MDE1NjI2",
+      "title": "Wjh review again2",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/23",
+      "state": "MERGED",
+      "author": "hardaker",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I reviewed the document from head to tail again, and added/changed a number of things.  It's in much better shape now and I'm looking forward to talking about it this week.",
+      "createdAt": "2019-07-10T05:41:56Z",
+      "updatedAt": "2019-07-30T02:18:06Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "master",
+      "baseRefOid": "c272ef33b4b0964ce1ba015c6cc742ae8dac8b77",
+      "headRepository": "hardaker/use-it-or-lose-it",
+      "headRefName": "wjh-review-again2",
+      "headRefOid": "7f87217f4e03e8f063d16df4c0e92800f7356d99",
+      "closedAt": "2019-07-30T02:18:06Z",
+      "mergedAt": "2019-07-30T02:18:06Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "7f87217f4e03e8f063d16df4c0e92800f7356d99"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 29,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTM5ODg1ODc0",
+      "title": "Add BGP attribute 99 experiment example",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/29",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #3.\r\nCloses #10.",
+      "createdAt": "2020-12-15T00:10:34Z",
+      "updatedAt": "2021-03-05T22:52:06Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "2cf280c280aa968dd28ae611ba049e541ea5a835",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "attribute99",
+      "headRefOid": "4b74e95173d7473b83ef6cf75f173b34436c998e",
+      "closedAt": "2021-03-05T22:52:06Z",
+      "mergedAt": "2021-03-05T22:52:05Z",
+      "mergedBy": "tfpauly",
+      "mergeCommit": {
+        "oid": "f1dd96384baab22a9c41c8980cf38183c7a20c82"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjA1NjY5NjQy",
+          "commit": {
+            "abbreviatedOid": "4638cde"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-03-05T22:51:12Z",
+          "updatedAt": "2021-03-05T22:51:12Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTM5OTQ3NTEz",
+      "title": "Add version negotiation advice",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/30",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #27.",
+      "createdAt": "2020-12-15T03:26:21Z",
+      "updatedAt": "2021-03-05T22:49:15Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "37f9625c49e70d2dd5db2c7e0277ddbaf6069a5e",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "vn",
+      "headRefOid": "1215f35823ab3a281848121c8dbc20a8fe1780b1",
+      "closedAt": "2021-03-05T22:49:15Z",
+      "mergedAt": "2021-03-05T22:49:15Z",
+      "mergedBy": "tfpauly",
+      "mergeCommit": {
+        "oid": "2cf280c280aa968dd28ae611ba049e541ea5a835"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NTU1MDk0MTA5",
+          "commit": {
+            "abbreviatedOid": "1215f35"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-12-18T00:34:27Z",
+          "updatedAt": "2020-12-18T00:34:27Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjE5NjEwMTMw",
+      "title": "IP version is four bits",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/33",
+      "state": "MERGED",
+      "author": "DavidSchinazi",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-04-20T19:20:03Z",
+      "updatedAt": "2021-04-21T00:01:03Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "b809ca08083ecaa7f1c3aa3d4f79554e346e2e60",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "four_bits",
+      "headRefOid": "5a0e038fc5ad2c45e70f0abe380b8eed818f0be9",
+      "closedAt": "2021-04-21T00:00:12Z",
+      "mergedAt": "2021-04-21T00:00:12Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "420df5a3748fd23450dcb41fc27b1293e08e890d"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Or is it *one* bit?\r\n\r\nEither way, thanks for the obvious correction.",
+          "createdAt": "2021-04-21T00:01:02Z",
+          "updatedAt": "2021-04-21T00:01:02Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 37,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjIwMzY2OTMy",
+      "title": "Editorial pass",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/37",
+      "state": "MERGED",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [
+        "tfpauly"
+      ],
+      "labels": [],
+      "body": "Purely editorial pass of use-it-or-lose-it; mainly trying to fix up wordings that I found awkward or misleading on a detailed read.",
+      "createdAt": "2021-04-21T16:39:15Z",
+      "updatedAt": "2021-05-03T15:49:39Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "420df5a3748fd23450dcb41fc27b1293e08e890d",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "tfpauly-patch-1",
+      "headRefOid": "af175fc130d65146c9bcde08757da84ebba697bf",
+      "closedAt": "2021-05-03T15:49:39Z",
+      "mergedAt": "2021-05-03T15:49:39Z",
+      "mergedBy": "tfpauly",
+      "mergeCommit": {
+        "oid": "cf9a2a49a36efa7d4a37599cead19befb70b7073"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQxNDMwNDg3",
+          "commit": {
+            "abbreviatedOid": "af175fc"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Nice!",
+          "createdAt": "2021-04-21T19:01:31Z",
+          "updatedAt": "2021-04-21T19:03:22Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "nit: if we're modifying this perhaps we fix the fact that the protocol isn't the one deploying changes?",
+              "createdAt": "2021-04-21T19:01:31Z",
+              "updatedAt": "2021-04-21T19:03:22Z"
+            },
+            {
+              "originalPosition": 33,
+              "body": "I think I prefer MT's phrasing: there is no such thing as a perfect implementation :)",
+              "createdAt": "2021-04-21T19:02:11Z",
+              "updatedAt": "2021-04-21T19:03:22Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQxNDM1NzIw",
+          "commit": {
+            "abbreviatedOid": "af175fc"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-04-21T19:08:28Z",
+          "updatedAt": "2021-04-21T19:08:28Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Yeah, my problem with the current title is that the previous title doesn't actually explain why this is a problem... just saying that \"protocols are imperfect\" didn't feel like a summary of the entire section 2.",
+              "createdAt": "2021-04-21T19:08:28Z",
+              "updatedAt": "2021-04-21T19:08:28Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQxNDU2NTk4",
+          "commit": {
+            "abbreviatedOid": "af175fc"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-04-21T19:36:42Z",
+          "updatedAt": "2021-04-21T19:36:42Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "It's not \"protocols are imperfect\", it's \"implementations (of protocols) are imperfect\"",
+              "createdAt": "2021-04-21T19:36:42Z",
+              "updatedAt": "2021-04-21T19:36:42Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQxNjQ5ODg3",
+          "commit": {
+            "abbreviatedOid": "af175fc"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "I share David's reservations about the title, but it isn't strong.",
+          "createdAt": "2021-04-22T00:05:58Z",
+          "updatedAt": "2021-04-22T00:05:58Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQyNjY4Njg4",
+          "commit": {
+            "abbreviatedOid": "af175fc"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-04-22T21:08:14Z",
+          "updatedAt": "2021-04-22T21:08:15Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Maybe just \"Protocol Evolution Limitations\" since all implementations are imperfect? \ud83e\udd37 ",
+              "createdAt": "2021-04-22T21:08:15Z",
+              "updatedAt": "2021-04-22T21:08:15Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjIxNTQ4Mzg4",
+      "title": "Rename disuse section",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/40",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I was unhappy with the title.",
+      "createdAt": "2021-04-22T21:17:18Z",
+      "updatedAt": "2021-05-03T15:50:06Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "420df5a3748fd23450dcb41fc27b1293e08e890d",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "disuse-title",
+      "headRefOid": "01bdf701379bd61c35b9ce708dc5cb6b5c277420",
+      "closedAt": "2021-05-03T15:50:06Z",
+      "mergedAt": "2021-05-03T15:50:06Z",
+      "mergedBy": "tfpauly",
+      "mergeCommit": {
+        "oid": "a9fe4eb19487521ec38a9946159b251b159880f6"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQyNjc3NDgy",
+          "commit": {
+            "abbreviatedOid": "01bdf70"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-04-22T21:21:07Z",
+          "updatedAt": "2021-04-22T21:21:07Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjUwNDc5NTA1",
+          "commit": {
+            "abbreviatedOid": "01bdf70"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-05-03T15:50:01Z",
+          "updatedAt": "2021-05-03T15:50:01Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjIxNTg0ODM0",
+      "title": "Grease is fake active use",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/42",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "So it isn't as good.  Let's (better) avoid creating a false impression\r\nof equivalence.",
+      "createdAt": "2021-04-22T21:46:56Z",
+      "updatedAt": "2021-05-03T15:56:53Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "420df5a3748fd23450dcb41fc27b1293e08e890d",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "false-active-use",
+      "headRefOid": "f6610b520321d2adee348c25b25d848ed9dc9b3c",
+      "closedAt": "2021-05-03T15:56:53Z",
+      "mergedAt": "2021-05-03T15:56:53Z",
+      "mergedBy": "tfpauly",
+      "mergeCommit": {
+        "oid": "20a8c8af47965d90ca78f1926de7e9d04126f221"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQyODQzMTcz",
+          "commit": {
+            "abbreviatedOid": "861b436"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-04-23T01:15:17Z",
+          "updatedAt": "2021-04-23T01:15:17Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjUwNDgxNTE4",
+          "commit": {
+            "abbreviatedOid": "861b436"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-05-03T15:52:22Z",
+          "updatedAt": "2021-05-03T15:52:45Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\ngreasing only mimics active use of an extension point, it only exercises a small\r\n```",
+              "createdAt": "2021-05-03T15:52:23Z",
+              "updatedAt": "2021-05-03T15:52:45Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjIxNzA4Mjc1",
+      "title": "One does not simply negotiate a change to the address architecture",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/44",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The point about all participants wasn't really sharp enough for\r\n@jariarkko, which I can see.  The thing is, even the proposed \"changes\r\nto addressing architecture would need to involve every node on the path\"\r\ndoesn't really capture the magnitude of the problem.  IP packets end up\r\nfollowing all sorts of paths.\r\n\r\nI'm not sure if this is clearer, but I hope it better conveys the\r\nenormity of the class E problem.\r\n\r\nCloses #41.",
+      "createdAt": "2021-04-23T01:44:51Z",
+      "updatedAt": "2021-05-03T15:56:42Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "420df5a3748fd23450dcb41fc27b1293e08e890d",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "every-node",
+      "headRefOid": "3ac2733729951ed1bc1437c4eef8bb3cb6adf500",
+      "closedAt": "2021-05-03T15:56:42Z",
+      "mergedAt": "2021-05-03T15:56:42Z",
+      "mergedBy": "tfpauly",
+      "mergeCommit": {
+        "oid": "b4fbbf880158cc16b8d1cd5de8d5415e7872f20c"
+      },
+      "comments": [
+        {
+          "author": "jariarkko",
+          "authorAssociation": "NONE",
+          "body": "Looks good to me",
+          "createdAt": "2021-04-23T08:45:39Z",
+          "updatedAt": "2021-04-23T08:45:39Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjQyODY0NjMx",
+          "commit": {
+            "abbreviatedOid": "3ac2733"
+          },
+          "author": "DavidSchinazi",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "That commit message is _mimes chef's kiss_",
+          "createdAt": "2021-04-23T01:51:09Z",
+          "updatedAt": "2021-04-23T01:51:09Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NjUwNDg1MTEy",
+          "commit": {
+            "abbreviatedOid": "3ac2733"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-05-03T15:56:34Z",
+          "updatedAt": "2021-05-03T15:56:34Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjQxNTE2NDYw",
+      "title": "Remove \"no firm guidelines\"",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/45",
+      "state": "MERGED",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #36",
+      "createdAt": "2021-05-11T19:28:42Z",
+      "updatedAt": "2021-05-12T02:54:30Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "20a8c8af47965d90ca78f1926de7e9d04126f221",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "tfpauly-patch-2",
+      "headRefOid": "eeab5ff97df7dadf57473df1ce669ab796b314fe",
+      "closedAt": "2021-05-12T02:42:06Z",
+      "mergedAt": "2021-05-12T02:42:06Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "ab8fc34cf1855bd2122f3c37e041e4d332727161"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
