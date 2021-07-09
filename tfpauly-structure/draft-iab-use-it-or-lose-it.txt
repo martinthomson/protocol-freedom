@@ -4,8 +4,9 @@
 
 Network Working Group                                         M. Thomson
 Internet-Draft                                                   Mozilla
-Intended status: Informational                             21 April 2021
-Expires: 23 October 2021
+Intended status: Informational                                  T. Pauly
+Expires: 10 January 2022                                           Apple
+                                                             9 July 2021
 
 
           Long-term Viability of Protocol Extension Mechanisms
@@ -44,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 October 2021.
+   This Internet-Draft will expire on 10 January 2022.
 
 Copyright Notice
 
@@ -65,7 +66,7 @@ Table of Contents
    1.  Introduction
    2.  Imperfect Implementations Limit Protocol Evolution
      2.1.  Good Protocol Design is Not Itself Sufficient
-     2.2.  Examples of Disuse
+     2.2.  Disuse Can Hide Problems
      2.3.  Multi-Party Interactions and Middleboxes
    3.  Retaining Viable Protocol Evolution Mechanisms
      3.1.  Examples of Active Use
@@ -73,16 +74,17 @@ Table of Contents
      3.3.  Unused Extension Points Become Unusable
    4.  Defensive Design Principles for Protocols
      4.1.  Active Use
-     4.2.  Version Negotiation
-     4.3.  Cryptography
-     4.4.  Grease
-     4.5.  Invariants
-     4.6.  Effective Feedback
+       4.1.1.  Version Negotiation
+       4.1.2.  Falsifying Active Use
+     4.2.  Complementary Defensive Techniques
+       4.2.1.  Cryptography
+       4.2.2.  Invariants
+       4.2.3.  Effective Feedback
    5.  Security Considerations
    6.  IANA Considerations
    7.  Informative References
    Acknowledgments
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -183,7 +185,7 @@ Table of Contents
    mechanisms.  This leads to these mechanisms being particularly
    affected by this problem.
 
-2.2.  Examples of Disuse
+2.2.  Disuse Can Hide Problems
 
    Transport Layer Security (TLS) [TLS12] provides examples of where a
    design that is objectively sound fails when incorrectly implemented.
@@ -404,10 +406,15 @@ Table of Contents
    their use can result in diverse or conflicting semantics being
    attributed without any hope of interoperability.  An example of this
    is the "class E" address space in IPv4 [RFC0988], which was reserved
-   without assigning any semantics.  For protocols that can use
-   negotiation to attribute semantics to codepoints, it is possible that
-   unused codepoints can be reclaimed for active use, though this
-   requires that the negotiation include all protocol participants.
+   without assigning any semantics.
+
+   For protocols that can use negotiation to attribute semantics to
+   codepoints, it is possible that unused codepoints can be reclaimed
+   for active use, though this requires that the negotiation include all
+   protocol participants.  For something as fundamental as addressing,
+   negotiation is difficult or even impossible, as all nodes on the
+   network path plus potential alternative paths would need to be
+   involved.
 
 4.  Defensive Design Principles for Protocols
 
@@ -432,10 +439,9 @@ Table of Contents
    in which a protocol is deployed.  The frequency of changes necessary
    to safeguard some mechanisms might be slow enough to attract
    ossification in another protocol deployment, while being excessive in
-   others.  There are currently no firm guidelines for new protocol
-   development.
+   others.
 
-4.2.  Version Negotiation
+4.1.1.  Version Negotiation
 
    As noted in Section 2.1, protocols that provide version negotiation
    mechanisms might not be able to test that feature until a new version
@@ -460,24 +466,7 @@ Table of Contents
    the IP protocol number is known to be unreliable and therefore not
    suitable [NEW-PROTOCOLS].
 
-4.3.  Cryptography
-
-   Cryptography can be used to reduce the number of middlebox entities
-   that can participate in a protocol.  Using tools like TLS ensures
-   that only authorized participants are able to influence whether a new
-   protocol feature is used.
-
-   Permitting fewer protocol participants reduces the number of
-   implementations that can prevent a new mechanism from being deployed.
-   As recommended in [PATH-SIGNALS], use of encryption and integrity
-   protection can be used to limit participation.
-
-   For example, the QUIC protocol [QUIC] adopts both encryption and
-   integrity protection.  Encryption is used to carefully control what
-   information is exposed to middleboxes.  For those fields that are not
-   encrypted, QUIC uses integrity protection to prevent modification.
-
-4.4.  Grease
+4.1.2.  Falsifying Active Use
 
    "Grease", originally defined for TLS [GREASE], identifies lack of use
    as an issue (protocol mechanisms "rusting" shut) and proposes
@@ -517,12 +506,13 @@ Table of Contents
    ability of peers to handle the absence of certain capabilities.
 
    This style of defensive design is limited because it is only
-   superficial.  It only exercises a small part of the mechanisms that
-   support extensibility.  More critically, it does not easily translate
-   to all forms of extension points.  For instance, HMSV negotiation
-   cannot be greased in this fashion.  Other techniques might be
-   necessary for protocols that don't rely on the particular style of
-   exchange that is predominant in TLS.
+   superficial.  As greasing only mimics active use of an extension
+   point, it only exercises a small part of the mechanisms that support
+   extensibility.  More critically, it does not easily translate to all
+   forms of extension points.  For instance, HMSV negotiation cannot be
+   greased in this fashion.  Other techniques might be necessary for
+   protocols that don't rely on the particular style of exchange that is
+   predominant in TLS.
 
    Grease is deployed with the intent of quickly revealing errors in
    implementing the mechanisms it safeguards.  Though it has been
@@ -534,7 +524,31 @@ Table of Contents
    participants that are willing to invest the effort and tolerate the
    risk of interoperability failures.
 
-4.5.  Invariants
+4.2.  Complementary Defensive Techniques
+
+   The protections to protocol evolution that come from active use can
+   be improved through the use of other defensive techniques.  The
+   techniques listed here might not prevent ossification on their own,
+   but can make active use more effective.
+
+4.2.1.  Cryptography
+
+   Cryptography can be used to reduce the number of middlebox entities
+   that can participate in a protocol.  Using tools like TLS ensures
+   that only authorized participants are able to influence whether a new
+   protocol feature is used.
+
+   Permitting fewer protocol participants reduces the number of
+   implementations that can prevent a new mechanism from being deployed.
+   As recommended in [PATH-SIGNALS], use of encryption and integrity
+   protection can be used to limit participation.
+
+   For example, the QUIC protocol [QUIC] adopts both encryption and
+   integrity protection.  Encryption is used to carefully control what
+   information is exposed to middleboxes.  For those fields that are not
+   encrypted, QUIC uses integrity protection to prevent modification.
+
+4.2.2.  Invariants
 
    Documenting aspects of the protocol that cannot or will not change as
    extensions or new versions are added can be a useful exercise.
@@ -554,13 +568,13 @@ Table of Contents
    such as the appendix of [QUIC-INVARIANTS], can be used to clarify
    intent.
 
-4.6.  Effective Feedback
+4.2.3.  Effective Feedback
 
    While not a direct means of protecting extensibility mechanisms,
    feedback systems can be important to discovering problems.
 
    Visibility of errors is critical to the success of techniques like
-   grease (see Section 4.4).  The grease design is most effective if a
+   grease (see Section 4.1.2).  The grease design is most effective if a
    deployment has a means of detecting and reporting errors.  Ignoring
    errors could allow problems to become entrenched.
 
@@ -651,16 +665,14 @@ Table of Contents
 
    [HTTP]     Fielding, R. T., Nottingham, M., and J. Reschke, "HTTP
               Semantics", Work in Progress, Internet-Draft, draft-ietf-
-              httpbis-semantics-15, 30 March 2021,
+              httpbis-semantics-16, 27 May 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-              semantics-15.txt>.
+              semantics-16>.
 
    [HTTP-HEADERS]
-              Nottingham, M. and P. Kamp, "Structured Field Values for
-              HTTP", Work in Progress, Internet-Draft, draft-ietf-
-              httpbis-header-structure-19, 3 June 2020,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-              header-structure-19.txt>.
+              Nottingham, M. and P-H. Kamp, "Structured Field Values for
+              HTTP", RFC 8941, DOI 10.17487/RFC8941, February 2021,
+              <https://datatracker.ietf.org/doc/html/rfc8941>.
 
    [HTTP-RANGE]
               Fielding, R., Ed., Lafon, Y., Ed., and J. Reschke, Ed.,
@@ -693,18 +705,15 @@ Table of Contents
               DOI 10.17487/RFC8588, May 2019,
               <https://datatracker.ietf.org/doc/html/rfc8588>.
 
-   [QUIC]     Iyengar, J. and M. Thomson, "QUIC: A UDP-Based Multiplexed
-              and Secure Transport", Work in Progress, Internet-Draft,
-              draft-ietf-quic-transport-34, 14 January 2021,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              transport-34.txt>.
+   [QUIC]     Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
+              Multiplexed and Secure Transport", RFC 9000,
+              DOI 10.17487/RFC9000, May 2021,
+              <https://datatracker.ietf.org/doc/html/rfc9000>.
 
    [QUIC-INVARIANTS]
               Thomson, M., "Version-Independent Properties of QUIC",
-              Work in Progress, Internet-Draft, draft-ietf-quic-
-              invariants-13, 14 January 2021,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              invariants-13.txt>.
+              RFC 8999, DOI 10.17487/RFC8999, May 2021,
+              <https://datatracker.ietf.org/doc/html/rfc8999>.
 
    [RFC0988]  Deering, S., "Host extensions for IP multicasting",
               RFC 988, DOI 10.17487/RFC0988, July 1986,
@@ -789,9 +798,15 @@ Acknowledgments
    Wes Hardaker, Mirja Kuehlewind, Mark Nottingham, and Brian Trammell
    made significant contributions to this document.
 
-Author's Address
+Authors' Addresses
 
    Martin Thomson
    Mozilla
 
    Email: mt@lowentropy.net
+
+
+   Tommy Pauly
+   Apple
+
+   Email: tpauly@apple.com
