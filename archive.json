@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-05-13T00:51:55.235059+00:00",
+  "timestamp": "2021-07-11T00:49:04.617805+00:00",
   "repo": "intarchboard/draft-use-it-or-lose-it",
   "labels": [
     {
@@ -1821,6 +1821,40 @@
         "oid": "ab8fc34cf1855bd2122f3c37e041e4d332727161"
       },
       "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 46,
+      "id": "MDExOlB1bGxSZXF1ZXN0Njg2OTQxMzQ3",
+      "title": "Restructure section 4",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/46",
+      "state": "OPEN",
+      "author": "tfpauly",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #43 \r\n\r\n- Restructure section 4\r\n- Update references\r\n- Add myself as author so I can help upload and rev in the future, and so we have an IAB member on it to progress",
+      "createdAt": "2021-07-09T17:30:17Z",
+      "updatedAt": "2021-07-09T17:32:55Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "ab8fc34cf1855bd2122f3c37e041e4d332727161",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "tfpauly-structure",
+      "headRefOid": "d4e5289ac434890d56ec8ca072ecf13b28c260c4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "body": "@martinthomson it may be nice to rev this for the submission deadline, and ask for community review during IETF 111",
+          "createdAt": "2021-07-09T17:32:55Z",
+          "updatedAt": "2021-07-09T17:32:55Z"
+        }
+      ],
       "reviews": []
     }
   ]
