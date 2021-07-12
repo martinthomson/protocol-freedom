@@ -5,8 +5,8 @@
 Network Working Group                                         M. Thomson
 Internet-Draft                                                   Mozilla
 Intended status: Informational                                  T. Pauly
-Expires: 12 January 2022                                           Apple
-                                                            11 July 2021
+Expires: 13 January 2022                                           Apple
+                                                            12 July 2021
 
 
           Long-term Viability of Protocol Extension Mechanisms
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 January 2022.
+   This Internet-Draft will expire on 13 January 2022.
 
 Copyright Notice
 
@@ -72,6 +72,7 @@ Table of Contents
      3.1.  Examples of Active Use
      3.2.  Dependency is Better
      3.3.  Unused Extension Points Become Unusable
+     3.4.  Restoring Active Use
    4.  Defensive Design Principles for Protocols
      4.1.  Active Use
        4.1.1.  Version Negotiation
@@ -416,6 +417,25 @@ Table of Contents
    network path plus potential alternative paths would need to be
    involved.
 
+3.4.  Restoring Active Use
+
+   With enough effort, active use can be used to restore capabililities.
+
+   EDNS [EDNS] was defined to provide extensibility in DNS.  Intolerance
+   of the extension in DNS servers resulted in a fallback method being
+   widely deployed (see Section 6.2.2 of [EDNS]), This fallback resulted
+   in EDNS being disabled for affected servers.  Over time, greater
+   support for EDNS and increased reliance on it for different features
+   motivated a flag day [DNSFLAGDAY] where the workaround was removed.
+
+   The EDNS example shows that effort can be used to restore
+   capabilities.  This is in part because EDNS was actively used with
+   most resolvers and servers.  It was therefore possible to force a
+   change to ensure that extension capabilities would always be
+   available.  However, this required an enormous coordination effort.
+   A small number of incompatible servers and the names they serve also
+   become inaccessible to most clients.
+
 4.  Defensive Design Principles for Protocols
 
    There are several potential approaches that can provide some measure
@@ -489,17 +509,17 @@ Table of Contents
    is regularly exposed to unknown values is less likely to be
    intolerant of new values when they appear.  This depends largely on
    the assumption that the difficulty of implementing the extension
-   mechanism correctly is not significantly more effort than
-   implementing code to identify and filter out reserved values.
-   Reserving random or unevenly distributed values for this purpose is
-   thought to further discourage special treatment.
+   mechanism correctly is as easy or easier than implementing code to
+   identify and filter out reserved values.  Reserving random or
+   unevenly distributed values for this purpose is thought to further
+   discourage special treatment.
 
    Without reserved greasing codepoints, an implementation can use code
    points from spaces used for private or experimental use if such a
    range exists.  In addition to the risk of triggering participation in
    an unwanted experiment, this can be less effective.  Incorrect
-   implementations might still be able to correctly identify these code
-   points and ignore them.
+   implementations might still be able to identify these code points and
+   ignore them.
 
    In addition to advertising bogus capabilities, an endpoint might also
    selectively disable non-critical protocol elements to test the
@@ -647,6 +667,15 @@ Table of Contents
    [DNS]      Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
               <https://datatracker.ietf.org/doc/html/rfc1034>.
+
+   [DNSFLAGDAY]
+              "DNS Flag Day 2019", May 2019,
+              <https://dnsflagday.net/2019/>.
+
+   [EDNS]     Damas, J., Graff, M., and P. Vixie, "Extension Mechanisms
+              for DNS (EDNS(0))", STD 75, RFC 6891,
+              DOI 10.17487/RFC6891, April 2013,
+              <https://datatracker.ietf.org/doc/html/rfc6891>.
 
    [EXTENSIBILITY]
               Carpenter, B., Aboba, B., Ed., and S. Cheshire, "Design
