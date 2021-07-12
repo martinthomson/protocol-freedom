@@ -77,10 +77,11 @@ Table of Contents
      4.1.  Active Use
        4.1.1.  Version Negotiation
        4.1.2.  Falsifying Active Use
-     4.2.  Complementary Defensive Techniques
+     4.2.  Complementary Techniques
        4.2.1.  Cryptography
-       4.2.2.  Invariants
-       4.2.3.  Effective Feedback
+       4.2.2.  Fewer Extension Points
+       4.2.3.  Invariants
+       4.2.4.  Effective Feedback
    5.  Security Considerations
    6.  IANA Considerations
    7.  Informative References
@@ -546,7 +547,7 @@ Table of Contents
    participants that are willing to invest the effort and tolerate the
    risk of interoperability failures.
 
-4.2.  Complementary Defensive Techniques
+4.2.  Complementary Techniques
 
    The protections to protocol evolution that come from active use can
    be improved through the use of other defensive techniques.  The
@@ -567,7 +568,24 @@ Table of Contents
    available to middleboxes and integrity protection prevents
    modification.
 
-4.2.2.  Invariants
+4.2.2.  Fewer Extension Points
+
+   A successful protocol will include many potential types of extension.
+   Designing multiple types of extension mechanism, each suited to a
+   specific purpose, might leave some extension points less heavily used
+   than others.
+
+   Disuse of a specialized extension point might render it unusable.  In
+   contrast, having a smaller number of extension points with wide
+   applicability could improve the use of those extension points.  Use
+   of a shared extension point for any purpose can protect rarer or more
+   specialized uses.
+
+   Both extensions and core protocol elements use the same extension
+   points in protocols like HTTP [HTTP] and DIAMETER [DIAMETER]; see
+   Section 3.1.
+
+4.2.3.  Invariants
 
    Documenting aspects of the protocol that cannot or will not change as
    extensions or new versions are added can be a useful exercise.
@@ -587,7 +605,7 @@ Table of Contents
    such as the appendix of [QUIC-INVARIANTS], can be used to clarify
    intent.
 
-4.2.3.  Effective Feedback
+4.2.4.  Effective Feedback
 
    While not a direct means of protecting extensibility mechanisms,
    feedback systems can be important to discovering problems.
