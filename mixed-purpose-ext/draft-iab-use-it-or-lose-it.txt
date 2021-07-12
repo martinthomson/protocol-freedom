@@ -580,8 +580,8 @@ Table of Contents
 
    Disuse of a specialized extension point might render it unusable.  In
    contrast, having a smaller number of extension points with wide
-   applicability could improve the use of the extension point.  Use of a
-   shared extension point for any purpose can protect rarer or more
+   applicability could improve the use of those extension points.  Use
+   of a shared extension point for any purpose can protect rarer or more
    specialized uses.
 
    Both extensions and core protocol elements use the same extension
