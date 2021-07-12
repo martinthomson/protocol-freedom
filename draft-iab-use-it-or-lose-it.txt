@@ -67,24 +67,27 @@ Table of Contents
    2.  Imperfect Implementations Limit Protocol Evolution
      2.1.  Good Protocol Design is Not Itself Sufficient
      2.2.  Disuse Can Hide Problems
+       2.2.1.  TLS
+       2.2.2.  DNS
+       2.2.3.  SNMP
+       2.2.4.  HTTP
+       2.2.5.  IPv4
      2.3.  Multi-Party Interactions and Middleboxes
    3.  Retaining Viable Protocol Evolution Mechanisms
      3.1.  Examples of Active Use
      3.2.  Dependency is Better
-     3.3.  Unused Extension Points Become Unusable
-     3.4.  Restoring Active Use
-   4.  Defensive Design Principles for Protocols
-     4.1.  Active Use
-       4.1.1.  Version Negotiation
-       4.1.2.  Falsifying Active Use
-     4.2.  Complementary Techniques
-       4.2.1.  Cryptography
-       4.2.2.  Fewer Extension Points
-       4.2.3.  Invariants
-       4.2.4.  Effective Feedback
-   5.  Security Considerations
-   6.  IANA Considerations
-   7.  Informative References
+     3.3.  Restoring Active Use
+   4.  Active Use
+     4.1.  Version Negotiation
+     4.2.  Falsifying Active Use
+   5.  Complementary Techniques
+     5.1.  Cryptography
+     5.2.  Fewer Extension Points
+       5.2.1.  Invariants
+     5.3.  Effective Feedback
+   6.  Security Considerations
+   7.  IANA Considerations
+   8.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -109,8 +112,9 @@ Table of Contents
    difficulties in transitions to new protocol features.  Section 3
    argues that ossified protocols are more difficult to update and
    successful protocols make frequent use of new extensions and code-
-   points.  Section 4 outlines several strategies that might aid in
-   ensuring that protocol changes remain possible over time.
+   points.  Section 4 and Section 5 outline several strategies that
+   might aid in ensuring that protocol changes remain possible over
+   time.
 
    The experience that informs this document is predominantly at
    "higher" layers of the network stack, in protocols that operate at
@@ -189,6 +193,12 @@ Table of Contents
 
 2.2.  Disuse Can Hide Problems
 
+   There are many examples of extension points in protocols that have
+   been either completely unused, or their use was so infrequent that
+   they could no longer be relied upon to function correctly.
+
+2.2.1.  TLS
+
    Transport Layer Security (TLS) [TLS12] provides examples of where a
    design that is objectively sound fails when incorrectly implemented.
    TLS provides examples of failures in protocol version negotiation and
@@ -218,6 +228,17 @@ Table of Contents
    any hope for using the extension point it defines has been abandoned
    [SNI].
 
+   Even where extension points have multiple valid values, if the set of
+   permitted values does not change over time, there is still a risk
+   that new values are not tolerated by existing implementations.  If
+   the set of values for a particular field remains fixed over a long
+   period, some implementations might not correctly handle a new value
+   when it is introduced.  For example, implementations of TLS broke
+   when new values of the signature_algorithms extension were
+   introduced.
+
+2.2.2.  DNS
+
    Ossified DNS code bases and systems resulted in fears that new
    Resource Record Codes (RRCodes) would take years of software
    propagation before new RRCodes could be used.  The result for a long
@@ -225,6 +246,8 @@ Table of Contents
    Sender Policy Framework [SPF].  It wasn't until after the standard
    mechanism for dealing with new RRCodes [RRTYPE] was considered widely
    deployed that new RRCodes can be safely created and used.
+
+2.2.3.  SNMP
 
    As a counter example, the first version of the Simple Network
    Management Protocol (SNMP) [SNMPv1] defines that unparseable or
@@ -238,6 +261,36 @@ Table of Contents
    what the protocol specifies.  Deployment of new versions was likely
    successful because the handling of newer versions was both clear and
    simple.
+
+2.2.4.  HTTP
+
+   HTTP has a number of very effective extension points in addition to
+   the aforementioned header fields.  It also has some examples of
+   extension points that are so rarely used that it is possible that
+   they are not at all usable.
+
+   Extension points in HTTP that might be unwise to use include the
+   extension point on each chunk in the chunked transfer coding
+   Section 7.1 of [HTTP11], the ability to use transfer codings other
+   than the chunked coding, and the range unit in a range request
+   Section 14 of [HTTP].
+
+2.2.5.  IPv4
+
+   Codepoints that are reserved for future use can be especially
+   problematic.  Reserving codepoints without attributing semantics to
+   their use can result in diverse or conflicting semantics being
+   attributed without any hope of interoperability.  An example of this
+   is the "class E" address space in IPv4 [RFC0988], which was reserved
+   without assigning any semantics.
+
+   For protocols that can use negotiation to attribute semantics to
+   codepoints, it is possible that unused codepoints can be reclaimed
+   for active use, though this requires that the negotiation include all
+   protocol participants.  For something as fundamental as addressing,
+   negotiation is difficult or even impossible, as all nodes on the
+   network path plus potential alternative paths would need to be
+   involved.
 
 2.3.  Multi-Party Interactions and Middleboxes
 
@@ -378,47 +431,7 @@ Table of Contents
    what is possible.  Those implementations might still exhibit errors
    when presented with new variations.
 
-3.3.  Unused Extension Points Become Unusable
-
-   In contrast, there are many examples of extension points in protocols
-   that have been either completely unused, or their use was so
-   infrequent that they could no longer be relied upon to function
-   correctly.
-
-   HTTP has a number of very effective extension points in addition to
-   the aforementioned header fields.  It also has some examples of
-   extension points that are so rarely used that it is possible that
-   they are not at all usable.  Extension points in HTTP that might be
-   unwise to use include the extension point on each chunk in the
-   chunked transfer coding [HTTP], the ability to use transfer codings
-   other than the chunked coding, and the range unit in a range request
-   [HTTP-RANGE].
-
-   Even where extension points have multiple valid values, if the set of
-   permitted values does not change over time, there is still a risk
-   that new values are not tolerated by existing implementations.  If
-   the set of values for a particular field remains fixed over a long
-   period, some implementations might not correctly handle a new value
-   when it is introduced.  For example, implementations of TLS broke
-   when new values of the signature_algorithms extension were
-   introduced.
-
-   Codepoints that are reserved for future use can be especially
-   problematic.  Reserving codepoints without attributing semantics to
-   their use can result in diverse or conflicting semantics being
-   attributed without any hope of interoperability.  An example of this
-   is the "class E" address space in IPv4 [RFC0988], which was reserved
-   without assigning any semantics.
-
-   For protocols that can use negotiation to attribute semantics to
-   codepoints, it is possible that unused codepoints can be reclaimed
-   for active use, though this requires that the negotiation include all
-   protocol participants.  For something as fundamental as addressing,
-   negotiation is difficult or even impossible, as all nodes on the
-   network path plus potential alternative paths would need to be
-   involved.
-
-3.4.  Restoring Active Use
+3.3.  Restoring Active Use
 
    With enough effort, active use can be used to restore capabililities.
 
@@ -437,13 +450,7 @@ Table of Contents
    A small number of incompatible servers and the names they serve also
    become inaccessible to most clients.
 
-4.  Defensive Design Principles for Protocols
-
-   There are several potential approaches that can provide some measure
-   of protection against a protocol deployment becoming resistant to
-   future changes.
-
-4.1.  Active Use
+4.  Active Use
 
    As discussed in Section 3, the most effective defense against
    ossification of protocol extension points is active use.
@@ -462,7 +469,7 @@ Table of Contents
    ossification in another protocol deployment, while being excessive in
    others.
 
-4.1.1.  Version Negotiation
+4.1.  Version Negotiation
 
    As noted in Section 2.1, protocols that provide version negotiation
    mechanisms might not be able to test that feature until a new version
@@ -487,7 +494,7 @@ Table of Contents
    the IP protocol number is known to be unreliable and therefore not
    suitable [NEW-PROTOCOLS].
 
-4.1.2.  Falsifying Active Use
+4.2.  Falsifying Active Use
 
    "Grease" was originally defined for TLS [GREASE], but has been
    adopted by other protocols, such as QUIC [QUIC].  Grease identifies
@@ -547,14 +554,14 @@ Table of Contents
    participants that are willing to invest the effort and tolerate the
    risk of interoperability failures.
 
-4.2.  Complementary Techniques
+5.  Complementary Techniques
 
-   The protections to protocol evolution that come from active use can
-   be improved through the use of other defensive techniques.  The
-   techniques listed here might not prevent ossification on their own,
-   but can make active use more effective.
+   The protections to protocol evolution that come from active use
+   (Section 4) can be improved through the use of other defensive
+   techniques.  The techniques listed here might not prevent
+   ossification on their own, but can make active use more effective.
 
-4.2.1.  Cryptography
+5.1.  Cryptography
 
    Cryptography can be used to reduce the number of middlebox entities
    that can participate in a protocol or limit the extent of
@@ -568,7 +575,7 @@ Table of Contents
    available to middleboxes and integrity protection prevents
    modification.
 
-4.2.2.  Fewer Extension Points
+5.2.  Fewer Extension Points
 
    A successful protocol will include many potential types of extension.
    Designing multiple types of extension mechanism, each suited to a
@@ -585,7 +592,7 @@ Table of Contents
    points in protocols like HTTP [HTTP] and DIAMETER [DIAMETER]; see
    Section 3.1.
 
-4.2.3.  Invariants
+5.2.1.  Invariants
 
    Documenting aspects of the protocol that cannot or will not change as
    extensions or new versions are added can be a useful exercise.
@@ -605,13 +612,13 @@ Table of Contents
    such as the appendix of [QUIC-INVARIANTS], can be used to clarify
    intent.
 
-4.2.4.  Effective Feedback
+5.3.  Effective Feedback
 
    While not a direct means of protecting extensibility mechanisms,
    feedback systems can be important to discovering problems.
 
    Visibility of errors is critical to the success of techniques like
-   grease (see Section 4.1.2).  The grease design is most effective if a
+   grease (see Section 4.2).  The grease design is most effective if a
    deployment has a means of detecting and reporting errors.  Ignoring
    errors could allow problems to become entrenched.
 
@@ -636,7 +643,7 @@ Table of Contents
    deployment errors as early as possible, such as seen in [DMARC] and
    [SMTP-TLS-Reporting].
 
-5.  Security Considerations
+6.  Security Considerations
 
    The ability to design, implement, and deploy new protocol mechanisms
    can be critical to security.  In particular, it is important to be
@@ -644,11 +651,11 @@ Table of Contents
    example, preparing for replacement of weak hash algorithms was made
    more difficult through misuse [HASH].
 
-6.  IANA Considerations
+7.  IANA Considerations
 
    This document makes no request of IANA.
 
-7.  Informative References
+8.  Informative References
 
    [AGILITY]  Housley, R., "Guidelines for Cryptographic Algorithm
               Agility and Selecting Mandatory-to-Implement Algorithms",
@@ -720,11 +727,11 @@ Table of Contents
               HTTP", RFC 8941, DOI 10.17487/RFC8941, February 2021,
               <https://datatracker.ietf.org/doc/html/rfc8941>.
 
-   [HTTP-RANGE]
-              Fielding, R., Ed., Lafon, Y., Ed., and J. Reschke, Ed.,
-              "Hypertext Transfer Protocol (HTTP/1.1): Range Requests",
-              RFC 7233, DOI 10.17487/RFC7233, June 2014,
-              <https://datatracker.ietf.org/doc/html/rfc7233>.
+   [HTTP11]   Fielding, R. T., Nottingham, M., and J. Reschke,
+              "HTTP/1.1", Work in Progress, Internet-Draft, draft-ietf-
+              httpbis-messaging-16, 27 May 2021,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
+              messaging-16>.
 
    [INTOLERANCE]
               Kario, H., "Re: [TLS] Thoughts on Version Intolerance", 20
