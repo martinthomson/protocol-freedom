@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-07-11T00:49:04.617805+00:00",
+  "timestamp": "2021-07-13T00:46:48.870050+00:00",
   "repo": "intarchboard/draft-use-it-or-lose-it",
   "labels": [
     {
@@ -319,31 +319,39 @@
       "id": "MDU6SXNzdWU0NjUwMTM0MDk=",
       "title": "Cite upcoming IAB output",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/21",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "There was discussion of a statement or RFC that says \"if you network it, it will be networked\" or \"any networked device should assume the internet threat model\" or something along those lines.  That would be a valuable citation in the context of the applicability statement.\r\n\r\nThere are many cases where people believe that their network won't end up connected to the Internet.  They make assumptions on that basis and are eventually disappointed to find that there are pressures to become networked (or someone does it for them, see also \"SSL added and removed here\").  At that point, assumptions about security become invalid and bad things happen.\r\n\r\nHere, the point is that the scope of potential use might not be as constrained as imagined.  So if someone thought that these considerations don't apply because of a narrow deployment context, that might not hold true forever.  This is less serious than the security thing, but certainly worth a caution.",
       "createdAt": "2019-07-08T00:57:35Z",
-      "updatedAt": "2019-07-08T00:57:35Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2021-07-12T05:14:23Z",
+      "closedAt": "2021-07-12T05:14:23Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This never manifested, so it doesn't make sense to keep the issue.",
+          "createdAt": "2021-07-12T05:14:21Z",
+          "updatedAt": "2021-07-12T05:14:21Z"
+        }
+      ]
     },
     {
       "number": 24,
       "id": "MDU6SXNzdWU0NzQzMjg1Mjg=",
       "title": "Mix of core and extensions",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/24",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "From Wes:\r\n\r\n> do we want to mention that the success of headers functionally is because there is a mix of both protocol specific fields and extra meta data; IE, allowing users and developers to specify new fields that will never be part of the protocol makes the fields be understood",
       "createdAt": "2019-07-30T01:38:40Z",
-      "updatedAt": "2020-12-15T00:13:31Z",
-      "closedAt": null,
+      "updatedAt": "2021-07-12T05:13:48Z",
+      "closedAt": "2021-07-12T05:13:48Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -562,15 +570,15 @@
       "id": "MDU6SXNzdWU4NjQwNTY2NDI=",
       "title": "Unify sections on disuse?",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/35",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "tfpauly",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "There are currently two sections that cover roughly the same point, with separate examples. It seems odd to have one in section 2, and one in section 3. Can 3.3 be merged into 2.2?\r\n\r\n2.2. Examples of Disuse\r\n\r\n3.3. Unused Extension Points Become Unusable",
       "createdAt": "2021-04-21T16:16:59Z",
-      "updatedAt": "2021-04-22T21:25:04Z",
-      "closedAt": null,
+      "updatedAt": "2021-07-12T05:27:21Z",
+      "closedAt": "2021-07-12T05:27:21Z",
       "comments": [
         {
           "author": "tfpauly",
@@ -640,7 +648,7 @@
       "id": "MDU6SXNzdWU4NjQxODQyNzQ=",
       "title": "Describe greasing in QUIC",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/38",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "tfpauly",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -649,8 +657,8 @@
       "labels": [],
       "body": "Current text is only TLS, we should add QUIC",
       "createdAt": "2021-04-21T19:11:07Z",
-      "updatedAt": "2021-04-21T19:11:07Z",
-      "closedAt": null,
+      "updatedAt": "2021-07-12T02:47:47Z",
+      "closedAt": "2021-07-12T02:47:47Z",
       "comments": []
     },
     {
@@ -658,17 +666,17 @@
       "id": "MDU6SXNzdWU4NjUyNTUzMjE=",
       "title": "Threat model",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/39",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "chris-wood",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [
         "chris-wood"
       ],
       "labels": [],
       "body": "There's a lot of great material in this document, but I think one thing that's missing is the threat model. I think this was discussed on a prior call, but consider the following two types of TLS examples:\r\n\r\n1. PQ key shares in an extension: in practice, we're primarily concerned with whether or not larger flights will make it through the network. The adversary is not an active attacker, but a benign, possibly buggy middlebox. Greasing to exercise size limits on TLS flights seems like a way to test this in practice.\r\n2. ECH: in practice, we're primarily concerned with whether passive or active middleboxes will tamper with or otherwise block connections using this extension. Greasing _might_ also apply here, but it's less clear than the above example.\r\n\r\nIn general, the threat model here seems to be more in line with (1). The syntax (wire image) of a protocol might trigger certain middlebox or endpoint behavior that is undesired, and so greasing to avoid these seems generally good. In contrast, (2) modifies both the syntax _and_, in way, the semantics of the protocol. Greasing in the spirit of this draft doesn't seem immediately applicable. \r\n\r\nIf it would be useful, I can try and contribute some text to clarify the desired threat model. ",
       "createdAt": "2021-04-22T17:48:46Z",
-      "updatedAt": "2021-05-05T14:51:56Z",
-      "closedAt": null,
+      "updatedAt": "2021-07-12T22:49:36Z",
+      "closedAt": "2021-07-12T22:49:36Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -715,7 +723,7 @@
       "id": "MDU6SXNzdWU4NjU1MjI5NDQ=",
       "title": "Consider restructuring section 4",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/43",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "tfpauly",
       "authorAssociation": "MEMBER",
       "assignees": [
@@ -724,8 +732,8 @@
       "labels": [],
       "body": "Consider grouping as:\r\n\r\nActive Use\r\n- Extensions\r\n- Version Negotiation (active use of the layer that contains you)\r\n- Filler/grease\r\n\r\nOther\r\n- Crypto\r\n- Invariants\r\n- Feedback",
       "createdAt": "2021-04-22T21:57:21Z",
-      "updatedAt": "2021-04-23T01:51:39Z",
-      "closedAt": null,
+      "updatedAt": "2021-07-11T23:35:44Z",
+      "closedAt": "2021-07-11T23:35:44Z",
       "comments": [
         {
           "author": "tfpauly",
@@ -740,6 +748,30 @@
           "body": "I would say instead:\r\n\r\n* Active Use (with the content from the section lifted up into the top of the section)\r\n  * Version Negotiation (as active use)\r\n  * Faking Active Use\r\n* Supplementary Defensive Techniques (it's not *literally* \"Other\"; but I would be happy to get better suggestions; framing would be that these - in addition to active use - might help)\r\n  * Crypto\r\n  * Invariants\r\n  * Feedback\r\n\r\nI realize that this structure has its own shortcomings, but one thing that is nice is that it doesn't require a whole lot of rewriting to get to this point.",
           "createdAt": "2021-04-23T01:51:39Z",
           "updatedAt": "2021-04-23T01:51:39Z"
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "id": "MDU6SXNzdWU5NDE2MDI3Mjk=",
+      "title": "EDNS Flag Day",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/47",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This was broadly successful, maybe this can be used as an example of where the Robustness Principle was applied over many years and did result in cruft.  The flag day ended that.  Presentation at RIPE and at last IETF.",
+      "createdAt": "2019-07-21T16:45:17Z",
+      "updatedAt": "2021-07-12T02:43:44Z",
+      "closedAt": "2021-07-12T02:43:44Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "After looking into this, the flag day is more applicable to the use-it-or-lose-it draft.  It is an unusual case where the EDNS extension has successfully been used over many years, but intolerance of it had prevented true reliance on it.  That it took ~20 years from the original definition to the point where people were confident in relying on it makes this a good example of what it takes to restore extensibility.",
+          "createdAt": "2021-07-12T02:11:17Z",
+          "updatedAt": "2021-07-12T02:11:17Z"
         }
       ]
     }
@@ -1828,24 +1860,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0Njg2OTQxMzQ3",
       "title": "Restructure section 4",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/46",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "tfpauly",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Closes #43 \r\n\r\n- Restructure section 4\r\n- Update references\r\n- Add myself as author so I can help upload and rev in the future, and so we have an IAB member on it to progress",
       "createdAt": "2021-07-09T17:30:17Z",
-      "updatedAt": "2021-07-09T17:32:55Z",
+      "updatedAt": "2021-07-11T23:37:46Z",
       "baseRepository": "intarchboard/draft-use-it-or-lose-it",
       "baseRefName": "main",
       "baseRefOid": "ab8fc34cf1855bd2122f3c37e041e4d332727161",
       "headRepository": "intarchboard/draft-use-it-or-lose-it",
       "headRefName": "tfpauly-structure",
       "headRefOid": "d4e5289ac434890d56ec8ca072ecf13b28c260c4",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2021-07-11T23:35:45Z",
+      "mergedAt": "2021-07-11T23:35:44Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "ac0ebe03d04ab4010ec3f5283cc8d6e0e48dd1b5"
+      },
       "comments": [
         {
           "author": "tfpauly",
@@ -1855,7 +1889,112 @@
           "updatedAt": "2021-07-09T17:32:55Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzAzNjM0NzM3",
+          "commit": {
+            "abbreviatedOid": "d4e5289"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks Tommy; I was just waiting on this :)",
+          "createdAt": "2021-07-11T23:35:38Z",
+          "updatedAt": "2021-07-11T23:35:38Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "id": "MDExOlB1bGxSZXF1ZXN0Njg3NTA2MDg4",
+      "title": "Recommend fewer, shared extension points",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/48",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@tfpauly, @hardaker, WDYT?",
+      "createdAt": "2021-07-12T04:50:15Z",
+      "updatedAt": "2021-07-12T05:14:28Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "9311cd4cffbca7a437e21aa278efa067dae22eac",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "mixed-purpose-ext",
+      "headRefOid": "8575cdf539dfd9ab4b8cd3218b36b6591d6ac614",
+      "closedAt": "2021-07-12T05:13:47Z",
+      "mergedAt": "2021-07-12T05:13:47Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "ef791dbe9bff98ba177cb150499ae0c3ac5bd1dd"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzAzNzEyNzQ2",
+          "commit": {
+            "abbreviatedOid": "8575cdf"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "Looks good to me!",
+          "createdAt": "2021-07-12T04:52:21Z",
+          "updatedAt": "2021-07-12T04:52:21Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "id": "MDExOlB1bGxSZXF1ZXN0Njg3NTI4ODgw",
+      "title": "Threat model-ish",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/49",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Filling in for @chris-wood, who has better things to do :)\r\n\r\nCloses #39.",
+      "createdAt": "2021-07-12T05:45:47Z",
+      "updatedAt": "2021-07-12T22:49:39Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "0b7124396c634576bb60d5d9b7e1e223a011c9be",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "threat-model",
+      "headRefOid": "9d37ad83626dc13edf3a7411a8a125a7287dd9f6",
+      "closedAt": "2021-07-12T22:49:36Z",
+      "mergedAt": "2021-07-12T22:49:36Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "ca912a373a0ead4c099f02ca9e17846207d0d937"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA0MjYzMjU3",
+          "commit": {
+            "abbreviatedOid": "c88ee7d"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-07-12T15:38:44Z",
+          "updatedAt": "2021-07-12T15:38:48Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\nthat cryptography is insufficient to exclude them.\r\n```",
+              "createdAt": "2021-07-12T15:38:45Z",
+              "updatedAt": "2021-07-12T15:38:48Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
