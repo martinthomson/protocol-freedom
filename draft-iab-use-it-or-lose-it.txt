@@ -5,8 +5,8 @@
 Network Working Group                                         M. Thomson
 Internet-Draft                                                   Mozilla
 Intended status: Informational                                  T. Pauly
-Expires: 13 January 2022                                           Apple
-                                                            12 July 2021
+Expires: 17 January 2022                                           Apple
+                                                            16 July 2021
 
 
           Long-term Viability of Protocol Extension Mechanisms
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 January 2022.
+   This Internet-Draft will expire on 17 January 2022.
 
 Copyright Notice
 
@@ -139,12 +139,13 @@ Table of Contents
    is true even if the negative reactions happen infrequently or only
    under relatively rare conditions.
 
-   Deploying a change to a protocol could require implementations fix a
-   substantial proportion of the bugs that the change exposes.  This can
-   involve a difficult process that includes identifying the cause of
-   these errors, finding the responsible implementation(s), coordinating
-   a bug fix and release plan, contacting users and/or the operator of
-   affected services, and waiting for the fix to be deployed.
+   Deploying a change to a protocol could require implementations to fix
+   a substantial proportion of the bugs that the change exposes.  This
+   can involve a difficult process that includes identifying the cause
+   of these errors, finding the responsible implementation(s),
+   coordinating a bug fix and release plan, contacting users and/or the
+   operator of affected services, and waiting for the fix to be
+   deployed.
 
    Given the effort involved in fixing problems, the existence of these
    sorts of bugs can outright prevent the deployment of some types of
@@ -207,7 +208,7 @@ Table of Contents
    Version negotiation in TLS 1.2 and earlier uses the "Highest mutually
    supported version (HMSV)" scheme exactly as it is described in
    [EXTENSIBILITY].  However, clients are unable to advertise a new
-   version without causing a non-trivial proportions of sessions to fail
+   version without causing a non-trivial proportion of sessions to fail
    due to bugs in server and middlebox implementations.
 
    Intolerance to new TLS versions is so severe [INTOLERANCE] that TLS
@@ -353,7 +354,7 @@ Table of Contents
    [EXTENSIBILITY] does not guarantee the ability to exercise those
    options.  The set of features that enable future evolution need to be
    interoperable in the first implementations and deployments of the
-   protocol.  Implementations of mechanisms that support evolution is
+   protocol.  Implementation of mechanisms that support evolution is
    necessary to ensure that they remain available for new uses, and
    history has shown this occurs almost exclusively through active
    mechanism use.
@@ -365,19 +366,20 @@ Table of Contents
    through active use of those mechanisms that determines the existence
    of freedom.  Protocols that routinely add new extensions and code
    points rarely have trouble adding additional ones, especially when
-   the handling of new versions or extension is well defined.
+   the handling of new versions or extensions is well defined.
 
 3.1.  Examples of Active Use
 
    For example, header fields in email [SMTP], HTTP [HTTP] and SIP [SIP]
-   all derive from the same basic design, which amounts to a list name/
-   value pairs.  There is no evidence of significant barriers to
+   all derive from the same basic design, which amounts to a list of
+   name/value pairs.  There is no evidence of significant barriers to
    deploying header fields with new names and semantics in email and
    HTTP as clients and servers can ignore headers they do not understand
    or need.  The widespread deployment of SIP B2BUAs means that new SIP
    header fields do not reliably reach peers, however, which doesn't
    necessarily cause interoperability issues but rather causes feature
-   deployment issues due to the lack of option passing Section 2.3.
+   deployment issues due to the lack of option passing middleboxes (see
+   Section 2.3).
 
    As another example, the attribute-value pairs (AVPs) in Diameter
    [DIAMETER] are fundamental to the design of the protocol.  Any use of
@@ -413,7 +415,7 @@ Table of Contents
    A deployment of SMTP cannot avoid including an implementation of
    header field handling.  In addition to this, the regularity with
    which new header fields are defined and used ensures that deployments
-   frequently encounter header fields that it does not yet (and may
+   frequently encounter header fields that they do not yet (and may
    never) understand.  An SMTP implementation therefore needs to be able
    to both process header fields that it understands and ignore those
    that it does not.
@@ -437,10 +439,11 @@ Table of Contents
 
    EDNS [EDNS] was defined to provide extensibility in DNS.  Intolerance
    of the extension in DNS servers resulted in a fallback method being
-   widely deployed (see Section 6.2.2 of [EDNS]), This fallback resulted
-   in EDNS being disabled for affected servers.  Over time, greater
-   support for EDNS and increased reliance on it for different features
-   motivated a flag day [DNSFLAGDAY] where the workaround was removed.
+   widely deployed (see Section 6.2.2 of [EDNS]).  This fallback
+   resulted in EDNS being disabled for affected servers.  Over time,
+   greater support for EDNS and increased reliance on it for different
+   features motivated a flag day [DNSFLAGDAY] where the workaround was
+   removed.
 
    The EDNS example shows that effort can be used to restore
    capabilities.  This is in part because EDNS was actively used with
@@ -448,7 +451,7 @@ Table of Contents
    change to ensure that extension capabilities would always be
    available.  However, this required an enormous coordination effort.
    A small number of incompatible servers and the names they serve also
-   become inaccessible to most clients.
+   became inaccessible to most clients.
 
 4.  Active Use
 
