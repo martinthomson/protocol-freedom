@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-07-13T00:46:48.870050+00:00",
+  "timestamp": "2021-07-18T00:45:41.039127+00:00",
   "repo": "intarchboard/draft-use-it-or-lose-it",
   "labels": [
     {
@@ -774,6 +774,38 @@
           "updatedAt": "2021-07-12T02:11:17Z"
         }
       ]
+    },
+    {
+      "number": 53,
+      "id": "MDU6SXNzdWU5NDYwODg0MzQ=",
+      "title": "ideas to make the document more crisp and shorter",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/53",
+      "state": "OPEN",
+      "author": "mirjak",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "The message of the document is rather easy and I think it would help to convey this message more clearly if the document would be shorter (also more crisp and less redundant maybe). Here are some proposals:\r\n\r\n1) I find the intro text in section 2 rather long and the content of 2.1. more strong to start with and then maybe cut the intro text to:\r\n\r\n\"Bugs in how new codepoints or extensions can manifest as abrupt termination of sessions, errors, crashes, or disappearances of endpoints and timeouts. These interoperability problems can hinder or stop deployment of new, valuable features even if the negative reactions happen infrequently or only under relatively rare conditions. Fixing bugs\r\nthat limit interoperability involves a difficult process that includes identifying the cause of these errors, finding the responsible implementation(s), coordinating a bug fix and release plan, contacting users and/or the operator of affected services, and waiting for the fix to be deployed. Especially for protocols involving multiple parties or that are considered critical infrastructure (e.g., IP, BGP, DNS, or TLS), it could even be necessary to come up with a new protocol design that uses a different method to achieve the same result.\"\r\n\r\n2) I would move the examples in 2.2. to the appendix and maybe only keep this paragraph (of the TLS section):\r\n\r\n\"Even where extension points have multiple valid values, if the set of permitted values does not change over time, there is still a risk that new values are not tolerated by existing implementations. If the set of values for a particular field remains fixed over a long period, some implementations might not correctly handle a new value when it is introduced. For example, implementations of TLS broke when new values of the signature_algorithms extension were introduced.\"\r\n\r\n3) In section 2.3 the part about MPTCP and TCP Open could also go to the appendix (and maybe provide a bit more insights there).\r\n\r\n4) maybe 3.1 could also go to the appendix; also because the last two paragraphs in 3.1. are really redundant with the intro of section 3.\r\n\r\n5) I know we just shuffled this around but I guess section 3.2 and 3.3 could also be subsections of 4. I'm actually not quite sure what the purpose or message of section 3 is...?\r\n\r\n",
+      "createdAt": "2021-07-16T09:00:43Z",
+      "updatedAt": "2021-07-16T09:10:49Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 54,
+      "id": "MDU6SXNzdWU5NDYwOTA3MTQ=",
+      "title": "The connection between active use and invariant could be more clear",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/54",
+      "state": "OPEN",
+      "author": "mirjak",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "For me there is this relation between invariants and active use/greasing, that every you don't use actively risks to become an invariant over time and cannot be changed anymore. (Similarly as rfc8558 says that everything that is exposed might be used as path signal and ossify). If people agree, maybe we can make this point more clearly and prominently?\r\n",
+      "createdAt": "2021-07-16T09:03:37Z",
+      "updatedAt": "2021-07-16T09:03:37Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -1993,6 +2025,128 @@
               "updatedAt": "2021-07-12T15:38:48Z"
             }
           ]
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjkwOTEzMTcx",
+      "title": "fix a few small typing mistakes",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/50",
+      "state": "MERGED",
+      "author": "auerswal",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-07-15T17:32:11Z",
+      "updatedAt": "2021-07-17T12:58:19Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "ca912a373a0ead4c099f02ca9e17846207d0d937",
+      "headRepository": null,
+      "headRefName": "typos_grammar",
+      "headRefOid": "c3d28497fd89d4219560eecaaa124e5b898669ec",
+      "closedAt": "2021-07-16T00:46:06Z",
+      "mergedAt": "2021-07-16T00:46:06Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "91839122e44b9a5939dc57f5c8101fd62e7c8d4e"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA3OTIwOTQz",
+          "commit": {
+            "abbreviatedOid": "c3d2849"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-07-16T00:45:13Z",
+          "updatedAt": "2021-07-16T00:45:13Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjkxMjQ2MTIz",
+      "title": "Auerswal feedback",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/51",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Thanks to @auerswal for these.  I tweaked the first a little for brevity.",
+      "createdAt": "2021-07-16T07:01:09Z",
+      "updatedAt": "2021-07-16T21:10:29Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "91839122e44b9a5939dc57f5c8101fd62e7c8d4e",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "auerswal-feedback",
+      "headRefOid": "6df1c1e13da26fa7537531a8fdd7ea702c901618",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA4NzUwNjQz",
+          "commit": {
+            "abbreviatedOid": "6df1c1e"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-07-16T21:10:29Z",
+          "updatedAt": "2021-07-16T21:10:29Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjkxMjgxNzU4",
+      "title": "Toerless' feedback",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/52",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Lots here, mostly rewording and tweaking emphasis.",
+      "createdAt": "2021-07-16T08:05:37Z",
+      "updatedAt": "2021-07-16T21:09:38Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "91839122e44b9a5939dc57f5c8101fd62e7c8d4e",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "toerless-feedback",
+      "headRefOid": "da9e322c77057e9db413ce0a801f29e313c13f45",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA4NzUwMTk1",
+          "commit": {
+            "abbreviatedOid": "da9e322"
+          },
+          "author": "tfpauly",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-07-16T21:09:38Z",
+          "updatedAt": "2021-07-16T21:09:38Z",
+          "comments": []
         }
       ]
     }
