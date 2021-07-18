@@ -5,8 +5,8 @@
 Network Working Group                                         M. Thomson
 Internet-Draft                                                   Mozilla
 Intended status: Informational                                  T. Pauly
-Expires: 17 January 2022                                           Apple
-                                                            16 July 2021
+Expires: 19 January 2022                                           Apple
+                                                            18 July 2021
 
 
           Long-term Viability of Protocol Extension Mechanisms
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 January 2022.
+   This Internet-Draft will expire on 19 January 2022.
 
 Copyright Notice
 
@@ -186,11 +186,11 @@ Table of Contents
       deficiencies have become evident.
 
    Indeed, basic interoperability is considered critical early in the
-   deployment of a protocol.  A desire to deploy can result in an
-   engineering practice that values simplicity, which could result in
-   deferring implementation of version negotiation and extension
-   mechanisms.  This leads to these mechanisms being particularly
-   affected by this problem.
+   deployment of a protocol.  A desire to deploy can result in early
+   focus on a reduced feature set, which could result in deferring
+   implementation of version negotiation and extension mechanisms.  This
+   leads to these mechanisms being particularly affected by this
+   problem.
 
 2.2.  Disuse Can Hide Problems
 
@@ -391,11 +391,11 @@ Table of Contents
    being relatively unaffected by deployment issues preventing addition
    of new values for new use cases.
 
-   These examples also confirm the case that good design does not
-   guarantee success.  On the contrary, success is often despite
-   shortcomings in the design.  For instance, the shortcomings of HTTP
-   header fields are significant enough that there are ongoing efforts
-   to improve the syntax [HTTP-HEADERS].
+   These examples show that a good design is not required for success.
+   On the contrary, success is often despite shortcomings in the design.
+   For instance, the shortcomings of HTTP header fields are significant
+   enough that there are ongoing efforts to improve the syntax
+   [HTTP-HEADERS].
 
    Only by using a protocol's extension capabilities does it ensure the
    availability of that capability.  Protocols that fail to use a
