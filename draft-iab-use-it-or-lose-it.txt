@@ -5,8 +5,8 @@
 Network Working Group                                         M. Thomson
 Internet-Draft                                                   Mozilla
 Intended status: Informational                                  T. Pauly
-Expires: 19 January 2022                                           Apple
-                                                            18 July 2021
+Expires: 20 January 2022                                           Apple
+                                                            19 July 2021
 
 
           Long-term Viability of Protocol Extension Mechanisms
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 January 2022.
+   This Internet-Draft will expire on 20 January 2022.
 
 Copyright Notice
 
@@ -574,11 +574,11 @@ Table of Contents
 
 5.1.  Cryptography
 
-   Cryptography can be used to reduce the number of middlebox entities
-   that can participate in a protocol or limit the extent of
-   participation.  Using TLS or other cryptographic tools can therefore
-   reduce the number of entities that can influence whether new features
-   are usable.
+   Cryptography can be used to reduce the number of entities that can
+   participate in a protocol or limit the extent of participation.
+   Using TLS or other cryptographic tools can therefore reduce the
+   number of entities that can influence whether new features are
+   usable.
 
    [PATH-SIGNALS] recommends the use of encryption and integrity
    protection to limit participation.  For example, encryption is used
@@ -876,8 +876,8 @@ Table of Contents
 
 Acknowledgments
 
-   Wes Hardaker, Mirja Kuehlewind, Mark Nottingham, and Brian Trammell
-   made significant contributions to this document.
+   Toerless Eckert, Wes Hardaker, Mirja Kuehlewind, Mark Nottingham, and
+   Brian Trammell made significant contributions to this document.
 
 Authors' Addresses
 
