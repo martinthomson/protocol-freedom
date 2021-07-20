@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-07-18T00:45:41.039127+00:00",
+  "timestamp": "2021-07-20T00:48:18.144703+00:00",
   "repo": "intarchboard/draft-use-it-or-lose-it",
   "labels": [
     {
@@ -787,24 +787,32 @@
       "labels": [],
       "body": "The message of the document is rather easy and I think it would help to convey this message more clearly if the document would be shorter (also more crisp and less redundant maybe). Here are some proposals:\r\n\r\n1) I find the intro text in section 2 rather long and the content of 2.1. more strong to start with and then maybe cut the intro text to:\r\n\r\n\"Bugs in how new codepoints or extensions can manifest as abrupt termination of sessions, errors, crashes, or disappearances of endpoints and timeouts. These interoperability problems can hinder or stop deployment of new, valuable features even if the negative reactions happen infrequently or only under relatively rare conditions. Fixing bugs\r\nthat limit interoperability involves a difficult process that includes identifying the cause of these errors, finding the responsible implementation(s), coordinating a bug fix and release plan, contacting users and/or the operator of affected services, and waiting for the fix to be deployed. Especially for protocols involving multiple parties or that are considered critical infrastructure (e.g., IP, BGP, DNS, or TLS), it could even be necessary to come up with a new protocol design that uses a different method to achieve the same result.\"\r\n\r\n2) I would move the examples in 2.2. to the appendix and maybe only keep this paragraph (of the TLS section):\r\n\r\n\"Even where extension points have multiple valid values, if the set of permitted values does not change over time, there is still a risk that new values are not tolerated by existing implementations. If the set of values for a particular field remains fixed over a long period, some implementations might not correctly handle a new value when it is introduced. For example, implementations of TLS broke when new values of the signature_algorithms extension were introduced.\"\r\n\r\n3) In section 2.3 the part about MPTCP and TCP Open could also go to the appendix (and maybe provide a bit more insights there).\r\n\r\n4) maybe 3.1 could also go to the appendix; also because the last two paragraphs in 3.1. are really redundant with the intro of section 3.\r\n\r\n5) I know we just shuffled this around but I guess section 3.2 and 3.3 could also be subsections of 4. I'm actually not quite sure what the purpose or message of section 3 is...?\r\n\r\n",
       "createdAt": "2021-07-16T09:00:43Z",
-      "updatedAt": "2021-07-16T09:10:49Z",
+      "updatedAt": "2021-07-19T00:50:06Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I've tried to enact some of this advice, which I think is timely.  Take a look and see what you think about the changes.  If they help, then I'll take them and we can iterate on the rest of this.  I've left some of the suggestions unimplemented, but I think that tightening things up more would be good.",
+          "createdAt": "2021-07-19T00:50:06Z",
+          "updatedAt": "2021-07-19T00:50:06Z"
+        }
+      ]
     },
     {
       "number": 54,
       "id": "MDU6SXNzdWU5NDYwOTA3MTQ=",
       "title": "The connection between active use and invariant could be more clear",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/issues/54",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mirjak",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "For me there is this relation between invariants and active use/greasing, that every you don't use actively risks to become an invariant over time and cannot be changed anymore. (Similarly as rfc8558 says that everything that is exposed might be used as path signal and ossify). If people agree, maybe we can make this point more clearly and prominently?\r\n",
       "createdAt": "2021-07-16T09:03:37Z",
-      "updatedAt": "2021-07-16T09:03:37Z",
-      "closedAt": null,
+      "updatedAt": "2021-07-19T11:04:01Z",
+      "closedAt": "2021-07-19T11:04:01Z",
       "comments": []
     }
   ],
@@ -2075,24 +2083,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NjkxMjQ2MTIz",
       "title": "Auerswal feedback",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/51",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Thanks to @auerswal for these.  I tweaked the first a little for brevity.",
       "createdAt": "2021-07-16T07:01:09Z",
-      "updatedAt": "2021-07-16T21:10:29Z",
+      "updatedAt": "2021-07-18T23:37:33Z",
       "baseRepository": "intarchboard/draft-use-it-or-lose-it",
       "baseRefName": "main",
       "baseRefOid": "91839122e44b9a5939dc57f5c8101fd62e7c8d4e",
       "headRepository": "intarchboard/draft-use-it-or-lose-it",
       "headRefName": "auerswal-feedback",
       "headRefOid": "6df1c1e13da26fa7537531a8fdd7ea702c901618",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2021-07-18T23:37:33Z",
+      "mergedAt": "2021-07-18T23:37:33Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "25b749c502f34ccaf76f6fa2b1630949cd51479f"
+      },
       "comments": [],
       "reviews": [
         {
@@ -2115,24 +2125,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NjkxMjgxNzU4",
       "title": "Toerless' feedback",
       "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/52",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Lots here, mostly rewording and tweaking emphasis.",
       "createdAt": "2021-07-16T08:05:37Z",
-      "updatedAt": "2021-07-16T21:09:38Z",
+      "updatedAt": "2021-07-18T23:39:20Z",
       "baseRepository": "intarchboard/draft-use-it-or-lose-it",
       "baseRefName": "main",
-      "baseRefOid": "91839122e44b9a5939dc57f5c8101fd62e7c8d4e",
+      "baseRefOid": "25b749c502f34ccaf76f6fa2b1630949cd51479f",
       "headRepository": "intarchboard/draft-use-it-or-lose-it",
       "headRefName": "toerless-feedback",
-      "headRefOid": "da9e322c77057e9db413ce0a801f29e313c13f45",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "6f62d4056e79a0f010f62396154905c7bad115dd",
+      "closedAt": "2021-07-18T23:39:16Z",
+      "mergedAt": "2021-07-18T23:39:16Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "fb6b3d7a6d0ce645353ac79191f6f71e9cd3cdf6"
+      },
       "comments": [],
       "reviews": [
         {
@@ -2147,6 +2159,176 @@
           "createdAt": "2021-07-16T21:09:38Z",
           "updatedAt": "2021-07-16T21:09:38Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjkyMTc0OTI0",
+      "title": "Fold Section 3 into Section 4",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/55",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I've kept most of the text but folded them together to see if this helps\r\nwith flow.  I'm not sure about this.\r\n\r\nFor part of #53.",
+      "createdAt": "2021-07-19T00:25:31Z",
+      "updatedAt": "2021-07-19T00:25:31Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "a46bf128cdc1298d54c5b4953331533ce2ef1c4c",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "drop-3",
+      "headRefOid": "9b3812e9470bfe1d0c8ea513b9a8c87c89e36cc7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 56,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjkyMTc2Mjc3",
+      "title": "Grease might be needed to keep invariants invariants",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/56",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #54.",
+      "createdAt": "2021-07-19T00:31:51Z",
+      "updatedAt": "2021-07-19T11:04:02Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "a46bf128cdc1298d54c5b4953331533ce2ef1c4c",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "invariant-grease-link",
+      "headRefOid": "d52be9088cecc519b24b8e86df235adeed4b1b36",
+      "closedAt": "2021-07-19T11:04:01Z",
+      "mergedAt": "2021-07-19T11:04:01Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "3225ac5829b9f9556a618f5f3087076f97bb9e6f"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA5MjYxMTM3",
+          "commit": {
+            "abbreviatedOid": "8b42833"
+          },
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-07-19T08:02:18Z",
+          "updatedAt": "2021-07-19T08:02:19Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\nimplementations understanding and respecting those invariants.  If active use is not\r\npossible for all non-invariant parts of the protocol, greasing ({{grease}}) might be\r\nused to improve the chance that invariants are respected.\r\n```",
+              "createdAt": "2021-07-19T08:02:19Z",
+              "updatedAt": "2021-07-19T08:02:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "id": "MDExOlB1bGxSZXF1ZXN0NjkyMTc5NzMx",
+      "title": "Move examples to an appendix",
+      "url": "https://github.com/intarchboard/draft-use-it-or-lose-it/pull/57",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I've not modified these much, if at all.  I've added paragraph breaks to\r\nsome.\r\n\r\nThe only one that has changes is TCP, where I've expanded a little on\r\nthe discussion of mptcp and tfo, based on my own understanding of the\r\nstatus of each.  I don't have good citations though, so I'd appreciate\r\nhelp.\r\n\r\nFor #53.",
+      "createdAt": "2021-07-19T00:48:19Z",
+      "updatedAt": "2021-07-20T00:18:11Z",
+      "baseRepository": "intarchboard/draft-use-it-or-lose-it",
+      "baseRefName": "main",
+      "baseRefOid": "a46bf128cdc1298d54c5b4953331533ce2ef1c4c",
+      "headRepository": "intarchboard/draft-use-it-or-lose-it",
+      "headRefName": "ex-appendix",
+      "headRefOid": "5d3ed949479adb2bdd1f81822bb110414152cfc8",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks Mirja, those are great references.",
+          "createdAt": "2021-07-20T00:18:08Z",
+          "updatedAt": "2021-07-20T00:18:08Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA5MjU1MTY0",
+          "commit": {
+            "abbreviatedOid": "a89857b"
+          },
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-07-19T07:55:37Z",
+          "updatedAt": "2021-07-19T07:55:38Z",
+          "comments": [
+            {
+              "originalPosition": 193,
+              "body": "Reference: Is it Still Possible to Extend TCP?\r\nMichio Honda, Yoshifumi Nishida, Costin Raiciu, Adam Greenhalgh, Mark Handley and Hideyuki Tokuda, ACM Internet Measurement Conference (IMC), November 2011",
+              "createdAt": "2021-07-19T07:55:37Z",
+              "updatedAt": "2021-07-19T07:55:38Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA5MjU1ODQ3",
+          "commit": {
+            "abbreviatedOid": "a89857b"
+          },
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-07-19T07:56:21Z",
+          "updatedAt": "2021-07-19T07:56:21Z",
+          "comments": [
+            {
+              "originalPosition": 198,
+              "body": "MPTCP specific reference: How Hard Can It Be? Designing and Implementing a Deployable Multipath TCP\r\nCostin Raiciu, Christoph Paasch, Sebastien Barre, Alan Ford, Michio Honda, Fabien Duchene, Olivier Bonaventure and Mark Handley, USENIX Networked Systems Design and Implementation (NSDI), April 2012",
+              "createdAt": "2021-07-19T07:56:21Z",
+              "updatedAt": "2021-07-19T07:56:21Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzA5MjYyMzg4",
+          "commit": {
+            "abbreviatedOid": "a89857b"
+          },
+          "author": "mirjak",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-07-19T08:03:47Z",
+          "updatedAt": "2021-07-19T08:03:48Z",
+          "comments": [
+            {
+              "originalPosition": 109,
+              "body": "Add a pointer to the new appendix...?",
+              "createdAt": "2021-07-19T08:03:48Z",
+              "updatedAt": "2021-07-19T08:03:48Z"
+            }
+          ]
         }
       ]
     }
