@@ -5,8 +5,8 @@
 Network Working Group                                         M. Thomson
 Internet-Draft                                                   Mozilla
 Intended status: Informational                                  T. Pauly
-Expires: 20 January 2022                                           Apple
-                                                            19 July 2021
+Expires: 21 January 2022                                           Apple
+                                                            20 July 2021
 
 
           Long-term Viability of Protocol Extension Mechanisms
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 January 2022.
+   This Internet-Draft will expire on 21 January 2022.
 
 Copyright Notice
 
@@ -250,7 +250,8 @@ Table of Contents
 
    This phenomenon appears at all layers of the protocol stack,
    especially when protocols are not designed with middlebox
-   participation in mind.
+   participation in mind.  Some of the examples in Appendix A
+   demonstrate this problem.
 
    By increasing the number of different actors involved in any single
    protocol exchange, the number of potential implementation bugs that a
@@ -639,6 +640,13 @@ Table of Contents
               DOI 10.17487/RFC6891, April 2013,
               <https://datatracker.ietf.org/doc/html/rfc6891>.
 
+   [EXT-TCP]  Honda, M., Nishida, Y., Raiciu, C., Greenhalgh, A.,
+              Handley, M., and H. Tokuda, "Is it still possible to
+              extend TCP?", Proceedings of the 2011 ACM SIGCOMM
+              conference on Internet measurement conference - IMC '11,
+              DOI 10.1145/2068816.2068834, 2011,
+              <https://doi.org/10.1145/2068816.2068834>.
+
    [EXTENSIBILITY]
               Carpenter, B., Aboba, B., Ed., and S. Cheshire, "Design
               Considerations for Protocol Extensions", RFC 6709,
@@ -680,6 +688,9 @@ Table of Contents
               "TCP Extensions for Multipath Operation with Multiple
               Addresses", RFC 6824, DOI 10.17487/RFC6824, January 2013,
               <https://datatracker.ietf.org/doc/html/rfc6824>.
+
+   [MPTCP-HOW-HARD]
+              "*** BROKEN REFERENCE ***".
 
    [NEW-PROTOCOLS]
               Barik, R., Welzl, M., Fairhurst, G., Elmokashfi, A.,
@@ -862,12 +873,13 @@ A.5.  SNMP
 A.6.  TCP
 
    Extension points in TCP [TCP] have been rendered difficult to use,
-   largely due to middlebox interactions.
+   largely due to middlebox interactions; see [EXT-TCP].
 
    For instance, multipath TCP [MPTCP] can only be deployed
-   opportunistically.  As multipath TCP enables progressive enhancement
-   of the protocol, this largely only causes the feature to not be
-   available if the path is intolerant of the extension.
+   opportunistically; see [MPTCP-HOW-HARD].  As multipath TCP enables
+   progressive enhancement of the protocol, this largely only causes the
+   feature to not be available if the path is intolerant of the
+   extension.
 
    In comparison, the deployment of Fast Open [TFO] critically depends
    on extension capability being widely available.  Though very few
